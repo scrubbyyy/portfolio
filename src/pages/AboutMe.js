@@ -1,12 +1,13 @@
+import { colors, content } from "../Config.js";
+
 import Header from "../components/Header.js";
 import SocialMediaLinks from "../components/SocialMediaLinks.js";
-import { content } from "../Config.js";
 
 function AboutMe() {
   return (
     <div style={styles.container}>
       <Header title={"About Me"} />
-      <p>{content.aboutMe}</p>
+      <p style={styles.content}>{content.aboutMe}</p>
       <SocialMediaLinks />
     </div>
   );
@@ -15,6 +16,9 @@ function AboutMe() {
 const styles = {
   container: {
     textAlign: "center",
+  },
+  content: {
+    color: colors.secondaryFont,
   },
 };
 

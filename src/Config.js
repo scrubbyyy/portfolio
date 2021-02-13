@@ -1,15 +1,15 @@
 export const colors = {
   mainFont: "black",
-  secondaryFont: "lightgrey",
-  headerFont: "lightgrey",
-  navFont: "lightgrey",
+  secondaryFont: "grey",
+  headerFont: "black",
+  navFont: "grey",
   separator: "lightgrey",
 };
 
 export const content = {
-  aboutMe: "asdf",
   mainTitle: "Natalia Ong's Portfolio",
   subtitle: "Concept Art & Illustration",
+  aboutMe: "asdf",
   lolbyte: "qwer",
 };
 

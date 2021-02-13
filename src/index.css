@@ -3,6 +3,11 @@
   src: url(fonts/Helvetica.ttf);
 }
 
+@font-face {
+  font-family: Helvetica-Bold;
+  src: url(fonts/Helvetica-Bold.ttf);
+}
+
 body {
   margin: 0;
   font-family: Helvetica;

@@ -31,6 +31,7 @@ const styles = {
     fontSize: 25,
     color: colors.mainFont,
     margin: 0,
+    fontFamily: "Helvetica-Bold"
   },
   subtitle: {
     fontSize: 15,
