@@ -11,7 +11,7 @@ import StarWars2 from "../images/home/OngNataliaPortfolio202115.jpg";
 
 function Home() {
   return (
-    <div className="App">
+    <div style={styles.container}>
       <Header title={"Environments"} />
       <Image src={Environment1} title={"TODO"} />
       <br />
@@ -31,5 +31,11 @@ function Home() {
     </div>
   );
 }
+
+const styles = {
+  container: {
+    textAlign: "center",
+  },
+};
 
 export default Home;

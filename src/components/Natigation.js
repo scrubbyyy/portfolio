@@ -1,17 +1,26 @@
 import { Nav, Navbar } from "react-bootstrap";
+import { colors, content } from "../Config.js";
 
 function Natigation() {
   return (
     <Navbar>
       <Navbar.Brand href="#home">
-        <p style={styles.title}>Natalia Ong's Portfolio</p>
-        <p style={styles.subtitle}>Concept Art & Illustration</p>
+        <p style={styles.title}>{content.mainTitle}</p>
+        <p style={styles.subtitle}>{content.subtitle}</p>
       </Navbar.Brand>
       <Nav className="ml-auto">
-        <Nav.Link href="/">Portfolio</Nav.Link>
-        <Nav.Link href="/projects">Projects</Nav.Link>
-        <Nav.Link href="/resume">Resume</Nav.Link>
-        <Nav.Link href="/about-me">About Me</Nav.Link>
+        <Nav.Link style={styles.navItem} href="/">
+          Portfolio
+        </Nav.Link>
+        <Nav.Link style={styles.navItem} href="/projects">
+          Projects
+        </Nav.Link>
+        <Nav.Link style={styles.navItem} href="/resume">
+          Resume
+        </Nav.Link>
+        <Nav.Link style={styles.navItem} href="/about-me">
+          About Me
+        </Nav.Link>
       </Nav>
     </Navbar>
   );
@@ -20,12 +29,16 @@ function Natigation() {
 const styles = {
   title: {
     fontSize: 25,
+    color: colors.mainFont,
     margin: 0,
   },
   subtitle: {
     fontSize: 15,
-    color: "grey",
+    color: colors.secondaryFont,
     margin: 0,
+  },
+  navItem: {
+    color: colors.navFont,
   },
 };
 

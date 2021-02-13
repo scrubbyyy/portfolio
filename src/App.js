@@ -1,5 +1,3 @@
-import "./App.css";
-
 import { Route, BrowserRouter as Router, Switch } from "react-router-dom";
 
 import AboutMe from "./pages/AboutMe.js";
