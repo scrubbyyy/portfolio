@@ -2,7 +2,8 @@ export const colors = {
   mainFont: "black",
   secondaryFont: "grey",
   headerFont: "black",
-  navFont: "grey",
+  mainNavFont: "black",
+  secondaryNavFont: "grey",
   separator: "lightgrey",
 };
 

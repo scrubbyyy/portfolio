@@ -1,8 +1,9 @@
 import { colors } from "../Config.js";
 
-function Header({ title }) {
+function Header({ id, title }) {
   return (
     <>
+      <div style={styles.anchor} id={id} />
       <hr style={styles.separator} />
       <h2 style={styles.header}>{title}</h2>
     </>
@@ -10,6 +11,12 @@ function Header({ title }) {
 }
 
 const styles = {
+  anchor: {
+    display: "block",
+    position: "relative",
+    top: -85,
+    visibility: "hidden",
+  },
   separator: {
     color: colors.separator,
     backgroundColor: colors.separator,

@@ -11,22 +11,22 @@ import StarWars2 from "../images/home/OngNataliaPortfolio202115.jpg";
 function Home() {
   return (
     <div style={styles.container}>
-      <Header title={"Environments"} />
-      <img style={styles.image} src={Environment1} alt={"TODO"} />
+      <Header id="env" title="Environments" />
+      <img style={styles.image} src={Environment1} alt="TODO" />
       <br />
-      <img style={styles.image} src={Environment2} alt={"TODO"} />
-      <Header title={"Star Wars: Commander"} />
-      <img style={styles.image} src={StarWars1} alt={"TODO"} />
+      <img style={styles.image} src={Environment2} alt="TODO" />
+      <Header id="starwars" title="Star Wars: Commander" />
+      <img style={styles.image} src={StarWars1} alt="TODO" />
       <br />
-      <img style={styles.image} src={StarWars2} alt={"TODO"} />
-      <Header title={"Glu Mobile"} />
-      <img style={styles.image} src={Glu1} alt={"TODO"} />
+      <img style={styles.image} src={StarWars2} alt="TODO" />
+      <Header id="glu" title="Glu Mobile" />
+      <img style={styles.image} src={Glu1} alt="TODO" />
       <br />
-      <img style={styles.image} src={Glu2} alt={"TODO"} />
-      <Header title={"Personal Work"} />
-      <img style={styles.image} src={Personal1} alt={"TODO"} />
+      <img style={styles.image} src={Glu2} alt="TODO" />
+      <Header id="personal" title="Personal Work" />
+      <img style={styles.image} src={Personal1} alt="TODO" />
       <br />
-      <img style={styles.image} src={Personal2} alt={"TODO"} />
+      <img style={styles.image} src={Personal2} alt="TODO" />
     </div>
   );
 }
