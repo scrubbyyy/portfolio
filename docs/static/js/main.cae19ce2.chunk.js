@@ -1,2 +1,0 @@
-(this.webpackJsonpnataliaongportfolio=this.webpackJsonpnataliaongportfolio||[]).push([[0],{11:function(t,n,o){"use strict";o.r(n);o(4),o(5);var e=o(0);var c=function(){return Object(e.jsx)("div",{className:"App",children:Object(e.jsx)("p",{children:"Welcome to Natalia Ong's Portfolio!"})})},i=o(1),a=o.n(i),r=o(3);o.n(r).a.render(Object(e.jsx)(a.a.StrictMode,{children:Object(e.jsx)(c,{})}),document.getElementById("root"))},4:function(t,n,o){},5:function(t,n,o){}},[[11,1,2]]]);
-//# sourceMappingURL=main.cae19ce2.chunk.js.map

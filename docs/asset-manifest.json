@@ -1,20 +1,34 @@
 {
   "files": {
-    "main.css": "./static/css/main.106baaae.chunk.css",
-    "main.js": "./static/js/main.cae19ce2.chunk.js",
-    "main.js.map": "./static/js/main.cae19ce2.chunk.js.map",
+    "main.css": "./static/css/main.dccb83dd.chunk.css",
+    "main.js": "./static/js/main.57ef8f7c.chunk.js",
+    "main.js.map": "./static/js/main.57ef8f7c.chunk.js.map",
     "runtime-main.js": "./static/js/runtime-main.74795e11.js",
     "runtime-main.js.map": "./static/js/runtime-main.74795e11.js.map",
-    "static/js/2.cfe69109.chunk.js": "./static/js/2.cfe69109.chunk.js",
-    "static/js/2.cfe69109.chunk.js.map": "./static/js/2.cfe69109.chunk.js.map",
+    "static/js/2.93c56398.chunk.js": "./static/js/2.93c56398.chunk.js",
+    "static/js/2.93c56398.chunk.js.map": "./static/js/2.93c56398.chunk.js.map",
     "index.html": "./index.html",
-    "static/css/main.106baaae.chunk.css.map": "./static/css/main.106baaae.chunk.css.map",
-    "static/js/2.cfe69109.chunk.js.LICENSE.txt": "./static/js/2.cfe69109.chunk.js.LICENSE.txt"
+    "static/css/main.dccb83dd.chunk.css.map": "./static/css/main.dccb83dd.chunk.css.map",
+    "static/js/2.93c56398.chunk.js.LICENSE.txt": "./static/js/2.93c56398.chunk.js.LICENSE.txt",
+    "static/media/index.css": "./static/media/Helvetica.06113bf7.ttf",
+    "static/media/OngNataliaPortfolio202036.31019500.jpg": "./static/media/OngNataliaPortfolio202036.31019500.jpg",
+    "static/media/OngNataliaPortfolio202114.41abc7a2.jpg": "./static/media/OngNataliaPortfolio202114.41abc7a2.jpg",
+    "static/media/OngNataliaPortfolio202115.64545082.jpg": "./static/media/OngNataliaPortfolio202115.64545082.jpg",
+    "static/media/OngNataliaPortfolio20212.edbcf1c4.jpg": "./static/media/OngNataliaPortfolio20212.edbcf1c4.jpg",
+    "static/media/OngNataliaPortfolio202125.a705ff11.jpg": "./static/media/OngNataliaPortfolio202125.a705ff11.jpg",
+    "static/media/OngNataliaPortfolio202126.1670e9fd.jpg": "./static/media/OngNataliaPortfolio202126.1670e9fd.jpg",
+    "static/media/OngNataliaPortfolio20213.4e454ad1.jpg": "./static/media/OngNataliaPortfolio20213.4e454ad1.jpg",
+    "static/media/OngNataliaPortfolio202148.1e735dad.jpg": "./static/media/OngNataliaPortfolio202148.1e735dad.jpg",
+    "static/media/OngNataliaPortfolio202149.f9f62bc4.jpg": "./static/media/OngNataliaPortfolio202149.f9f62bc4.jpg",
+    "static/media/OngNataliaResume2021.6e0a3207.png": "./static/media/OngNataliaResume2021.6e0a3207.png",
+    "static/media/artstation.01416d3c.svg": "./static/media/artstation.01416d3c.svg",
+    "static/media/instagram.f0cfa30d.svg": "./static/media/instagram.f0cfa30d.svg",
+    "static/media/linkedin.03f1d164.svg": "./static/media/linkedin.03f1d164.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.74795e11.js",
-    "static/js/2.cfe69109.chunk.js",
-    "static/css/main.106baaae.chunk.css",
-    "static/js/main.cae19ce2.chunk.js"
+    "static/js/2.93c56398.chunk.js",
+    "static/css/main.dccb83dd.chunk.css",
+    "static/js/main.57ef8f7c.chunk.js"
   ]
 }
