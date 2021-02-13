@@ -1,7 +1,10 @@
+import Separator from "./Separator.js";
+
 function Header(props) {
   return (
     <>
-      <h1>{props.title}</h1>
+      <Separator color="lightgrey" />
+      <h2>{props.title}</h2>
     </>
   );
 }

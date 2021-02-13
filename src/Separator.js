@@ -5,6 +5,7 @@ function Separator(props) {
         color: props.color,
         backgroundColor: props.color,
         height: 0.2,
+        marginTop: 0
       }}
     />
   );
