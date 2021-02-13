@@ -1,7 +1,6 @@
 import { colors, content } from "../Config.js";
 
 import Header from "../components/Header.js";
-import Image from "../components/Image.js";
 import LolByte1 from "../images/projects/OngNataliaPortfolio202036.jpg";
 
 function Projects() {
@@ -9,7 +8,7 @@ function Projects() {
     <div style={styles.container}>
       <Header title={"LolByte"} />
       <p style={styles.description}>{content.lolbyte}</p>
-      <Image src={LolByte1} title={"TODO"} />
+      <img style={styles.image} src={LolByte1} alt={"TODO"} />
     </div>
   );
 }
@@ -20,6 +19,10 @@ const styles = {
   },
   description: {
     color: colors.secondaryFont,
+  },
+  image: {
+    width: "60%",
+    height: "auto",
   },
 };
 
