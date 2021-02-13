@@ -1,13 +1,13 @@
-import Environment1 from "./images/home/OngNataliaPortfolio20212.jpg";
-import Environment2 from "./images/home/OngNataliaPortfolio20213.jpg";
-import Glu1 from "./images/home/OngNataliaPortfolio202125.jpg";
-import Glu2 from "./images/home/OngNataliaPortfolio202126.jpg";
-import Header from "./Header.js";
-import Image from "./Image.js";
-import Personal1 from "./images/home/OngNataliaPortfolio202148.jpg";
-import Personal2 from "./images/home/OngNataliaPortfolio202149.jpg";
-import StarWars1 from "./images/home/OngNataliaPortfolio202114.jpg";
-import StarWars2 from "./images/home/OngNataliaPortfolio202115.jpg";
+import Environment1 from "../images/home/OngNataliaPortfolio20212.jpg";
+import Environment2 from "../images/home/OngNataliaPortfolio20213.jpg";
+import Glu1 from "../images/home/OngNataliaPortfolio202125.jpg";
+import Glu2 from "../images/home/OngNataliaPortfolio202126.jpg";
+import Header from "../components/Header.js";
+import Image from "../components/Image.js";
+import Personal1 from "../images/home/OngNataliaPortfolio202148.jpg";
+import Personal2 from "../images/home/OngNataliaPortfolio202149.jpg";
+import StarWars1 from "../images/home/OngNataliaPortfolio202114.jpg";
+import StarWars2 from "../images/home/OngNataliaPortfolio202115.jpg";
 
 function Home() {
   return (

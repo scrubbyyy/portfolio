@@ -1,11 +1,12 @@
-import Header from "./Header.js";
-import Links from "./Links.js";
+import Header from "../components/Header.js";
+import Image from "../components/Image.js";
+import LolByte1 from "../images/projects/OngNataliaPortfolio202036.jpg";
 
-function AboutMe() {
+function Projects() {
   return (
     <div className="App">
-      <Header title={"About Me"} />
-      <p>
+      <Header title={"LolByte"} />
+      <p style={{ color: "lightgray" }}>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
         veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
@@ -14,9 +15,9 @@ function AboutMe() {
         occaecat cupidatat non proident, sunt in culpa qui officia deserunt
         mollit anim id est laborum.
       </p>
-      <Links />
+      <Image src={LolByte1} title={"TODO"} />
     </div>
   );
 }
 
-export default AboutMe;
+export default Projects;

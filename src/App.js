@@ -2,11 +2,11 @@ import "./App.css";
 
 import { Route, BrowserRouter as Router, Switch } from "react-router-dom";
 
-import AboutMe from "./AboutMe.js";
-import Home from "./Home.js";
-import Natigation from "./Nav.js";
-import Projects from "./Projects.js";
-import Resume from "./Resume.js";
+import AboutMe from "./pages/AboutMe.js";
+import Home from "./pages/Home.js";
+import Natigation from "./components/Natigation.js";
+import Projects from "./pages/Projects.js";
+import Resume from "./pages/Resume.js";
 
 function App() {
   return (

@@ -1,5 +1,5 @@
-import Header from "./Header.js";
-import ResumePdf from "./images/resume/OngNataliaResume2021.png";
+import Header from "../components/Header.js";
+import ResumePdf from "../images/resume/OngNataliaResume2021.png";
 
 function Resume() {
   return (
