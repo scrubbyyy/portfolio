@@ -24,12 +24,13 @@ function Projects({ theme }) {
   };
 
   return (
-    <>
+    <div style={styles.container}>
       <Card
         style={{
           marginTop: 10,
           marginBottom: 10,
-          maxWidth: "1000px",
+          maxWidth: "800px",
+          width: "98%",
           borderColor: theme.separator,
         }}
       >
@@ -50,13 +51,11 @@ function Projects({ theme }) {
           </Card.Text>
         </Card.Body>
       </Card>
-      <div style={styles.container}>
-        <img style={styles.image} src={LolByte1} alt="Natalia Ong Art" />
-        <img style={styles.image} src={LolByte2} alt="Natalia Ong Art" />
-        <img style={styles.image} src={LolByte3} alt="Natalia Ong Art" />
-        <img style={styles.image} src={LolByte4} alt="Natalia Ong Art" />
-      </div>
-    </>
+      <img style={styles.image} src={LolByte1} alt="Natalia Ong Art" />
+      <img style={styles.image} src={LolByte2} alt="Natalia Ong Art" />
+      <img style={styles.image} src={LolByte3} alt="Natalia Ong Art" />
+      <img style={styles.image} src={LolByte4} alt="Natalia Ong Art" />
+    </div>
   );
 }
 

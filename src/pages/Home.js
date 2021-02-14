@@ -80,7 +80,8 @@ function Home({ theme }) {
         style={{
           marginTop: 10,
           marginBottom: 10,
-          maxWidth: "1000px",
+          maxWidth: "800px",
+          width: "98%",
           borderColor: theme.separator,
         }}
       >
@@ -93,7 +94,7 @@ function Home({ theme }) {
             fontFamily: "Helvetica-Bold",
           }}
         >
-          Quicklinks
+          Portfolio Links
         </Card.Header>
         <Card.Body style={{ backgroundColor: theme.background }}>
           <div style={styles.navContainer}>

@@ -29,7 +29,8 @@ function Resume({ theme, isDarkMode }) {
           style={{
             marginTop: 10,
             marginBottom: 10,
-            maxWidth: "1000px",
+            maxWidth: "800px",
+            width: "98%",
             borderColor: theme.separator,
           }}
         >
