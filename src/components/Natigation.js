@@ -24,7 +24,6 @@ function Natigation({ theme, isDarkMode, darkModeHandler }) {
     secondaryNavItem: {
       color: theme.secondaryNavFont,
       fontSize: 14,
-      margin: 5,
     },
   };
 
