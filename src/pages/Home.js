@@ -12,25 +12,25 @@ function Home() {
   return (
     <div style={styles.container}>
       <Header id="env" title="Environments" />
-      <img style={styles.image} src={Environment1} alt="TODO" />
+      <img style={styles.image} src={Environment1} alt="Natalia Ong Art" />
       <br />
-      <img style={styles.image} src={Environment2} alt="TODO" />
+      <img style={styles.image} src={Environment2} alt="Natalia Ong Art" />
       <Header
         id="starwars"
         title="Star Wars: Commander"
         shrinkSeparator="true"
       />
-      <img style={styles.image} src={StarWars1} alt="TODO" />
+      <img style={styles.image} src={StarWars1} alt="Natalia Ong Art" />
       <br />
-      <img style={styles.image} src={StarWars2} alt="TODO" />
+      <img style={styles.image} src={StarWars2} alt="Natalia Ong Art" />
       <Header id="glu" title="Glu Mobile" shrinkSeparator="true" />
-      <img style={styles.image} src={Glu1} alt="TODO" />
+      <img style={styles.image} src={Glu1} alt="Natalia Ong Art" />
       <br />
-      <img style={styles.image} src={Glu2} alt="TODO" />
+      <img style={styles.image} src={Glu2} alt="Natalia Ong Art" />
       <Header id="personal" title="Personal Work" shrinkSeparator="true" />
-      <img style={styles.image} src={Personal1} alt="TODO" />
+      <img style={styles.image} src={Personal1} alt="Natalia Ong Art" />
       <br />
-      <img style={styles.image} src={Personal2} alt="TODO" />
+      <img style={styles.image} src={Personal2} alt="Natalia Ong Art" />
     </div>
   );
 }

@@ -8,7 +8,7 @@ function Projects() {
     <div style={styles.container}>
       <Header title="LolByte" />
       <p style={styles.description}>{content.lolbyte}</p>
-      <img style={styles.image} src={LolByte1} alt="TODO" />
+      <img style={styles.image} src={LolByte1} alt="Natalia Ong Art" />
     </div>
   );
 }
