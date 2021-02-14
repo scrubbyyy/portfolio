@@ -1,10 +1,24 @@
 export const colors = {
-  mainFont: "black",
-  secondaryFont: "grey",
-  headerFont: "black",
-  mainNavFont: "black",
-  secondaryNavFont: "grey",
-  separator: "lightgrey",
+  lightMode: {
+    mainFont: "black",
+    secondaryFont: "grey",
+    headerFont: "black",
+    mainNavFont: "black",
+    secondaryNavFont: "grey",
+    separator: "lightgrey",
+    background: "white",
+    navBackground: "#e3e6e8",
+  },
+  darkMode: {
+    mainFont: "white",
+    secondaryFont: "#7f7f7f",
+    headerFont: "white",
+    mainNavFont: "white",
+    secondaryNavFont: "#7f7f7f",
+    separator: "#7f7f7f",
+    background: "#242424",
+    navBackground: "#1e1e1e",
+  },
 };
 
 export const content = {

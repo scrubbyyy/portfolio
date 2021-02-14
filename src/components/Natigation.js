@@ -1,15 +1,50 @@
 import { Nav, NavDropdown, Navbar } from "react-bootstrap";
-import { colors, content } from "../Config.js";
 
+import DarkModeToggle from "react-dark-mode-toggle";
 import { HashLink as Link } from "react-router-hash-link";
+import { content } from "../Config.js";
 
-function Natigation() {
+function Natigation({ theme, isDarkMode, darkModeHandler }) {
+  const styles = {
+    title: {
+      fontSize: 25,
+      color: theme.mainFont,
+      margin: 0,
+      fontFamily: "Helvetica-Bold",
+    },
+    subtitle: {
+      fontSize: 15,
+      color: theme.secondaryFont,
+      margin: 0,
+    },
+    mainNavItem: {
+      color: theme.mainNavFont,
+      fontFamily: "Helvetica-Bold",
+    },
+    secondaryNavItem: {
+      color: theme.secondaryNavFont,
+      fontSize: 14,
+      margin: 5,
+    },
+  };
+
   return (
-    <Navbar expand="lg" sticky="top" bg="light">
+    <Navbar
+      expand="lg"
+      sticky="top"
+      variant={isDarkMode ? "dark" : "light"}
+      style={{ backgroundColor: theme.navBackground }}
+    >
       <Navbar.Brand href="/">
         <p style={styles.title}>{content.mainTitle}</p>
         <p style={styles.subtitle}>{content.subtitle}</p>
       </Navbar.Brand>
+      <DarkModeToggle
+        onChange={darkModeHandler}
+        checked={isDarkMode}
+        size={45}
+        speed={10}
+      />
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="ml-auto">
@@ -21,7 +56,7 @@ function Natigation() {
                 Environments
               </Link>
             </NavDropdown.Item>
-            <NavDropdown.Divider />
+            <NavDropdown.Divider style={{ backgroundColor: "black" }} />
             <NavDropdown.Item>
               <Link style={styles.secondaryNavItem} to="/#starwars">
                 Star Wars: Commander
@@ -46,36 +81,10 @@ function Natigation() {
           <Nav.Link style={styles.mainNavItem} href="/#/resume">
             Resume
           </Nav.Link>
-          <Nav.Link style={styles.mainNavItem} href="/#/about-me">
-            About Me
-          </Nav.Link>
         </Nav>
       </Navbar.Collapse>
     </Navbar>
   );
 }
-
-const styles = {
-  title: {
-    fontSize: 25,
-    color: colors.mainFont,
-    margin: 0,
-    fontFamily: "Helvetica-Bold",
-  },
-  subtitle: {
-    fontSize: 15,
-    color: colors.secondaryFont,
-    margin: 0,
-  },
-  mainNavItem: {
-    color: colors.mainNavFont,
-    fontFamily: "Helvetica-Bold",
-  },
-  secondaryNavItem: {
-    color: colors.secondaryNavFont,
-    fontSize: 14,
-    margin: 5,
-  },
-};
 
 export default Natigation;
