@@ -13,7 +13,7 @@ function Natigation() {
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav
-          style={window.location.pathname === "/nataliaongportfolio/" ? null : { display: "none" }}
+          style={window.location.pathname === "/" ? null : { display: "none" }}
           className="ml-auto"
         >
           <Link style={styles.secondaryNavItem} to="/#env">
@@ -30,16 +30,16 @@ function Natigation() {
           </Link>
         </Nav>
         <Nav className="ml-auto">
-          <Nav.Link style={styles.mainNavItem} href="/nataliaongportfolio/">
+          <Nav.Link style={styles.mainNavItem} href="/">
             Portfolio
           </Nav.Link>
-          <Nav.Link style={styles.mainNavItem} href="/nataliaongportfolio/#/projects">
+          <Nav.Link style={styles.mainNavItem} href="/#/projects">
             Projects
           </Nav.Link>
-          <Nav.Link style={styles.mainNavItem} href="/nataliaongportfolio/#/resume">
+          <Nav.Link style={styles.mainNavItem} href="/#/resume">
             Resume
           </Nav.Link>
-          <Nav.Link style={styles.mainNavItem} href="/nataliaongportfolio/#/about-me">
+          <Nav.Link style={styles.mainNavItem} href="/#/about-me">
             About Me
           </Nav.Link>
         </Nav>
