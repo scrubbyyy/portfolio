@@ -36,6 +36,7 @@ import Illust4 from "../images/home/OngNataliaPortfolio202146.jpg";
 import Illust5 from "../images/home/OngNataliaPortfolio202147.jpg";
 import Illust6 from "../images/home/OngNataliaPortfolio202148.jpg";
 import Illust7 from "../images/home/OngNataliaPortfolio202149.jpg";
+import { HashLink as Link } from "react-router-hash-link";
 import Star1 from "../images/home/OngNataliaPortfolio202114.jpg";
 import Star10 from "../images/home/OngNataliaPortfolio202123.jpg";
 import Star11 from "../images/home/OngNataliaPortfolio202124.jpg";
@@ -49,8 +50,44 @@ import Star8 from "../images/home/OngNataliaPortfolio202121.jpg";
 import Star9 from "../images/home/OngNataliaPortfolio202122.jpg";
 
 function Home({ theme }) {
+  const styles = {
+    container: {
+      textAlign: "center",
+    },
+    image: {
+      width: "99%",
+      maxWidth: "1000px",
+      height: "auto",
+      marginBottom: 15,
+    },
+    navItem: {
+      color: theme.secondaryFont,
+      fontSize: 14,
+      display: "block",
+      margin: 5,
+    },
+    navContainer: {
+      display: "inline-flex",
+      alignItems: "center",
+    },
+  };
+
   return (
     <div style={styles.container}>
+      <div style={styles.navContainer}>
+        <Link style={styles.navItem} to="/#env">
+          Environments
+        </Link>
+        <Link style={styles.navItem} to="/#starwars">
+          Star Wars: Commander
+        </Link>
+        <Link style={styles.navItem} to="/#glu">
+          Glu Mobile
+        </Link>
+        <Link style={styles.navItem} to="/#illustrations">
+          Illustrations
+        </Link>
+      </div>
       <br />
       <Header id="env" title="Environments" theme={theme} />
       <img style={styles.image} src={Env1} alt="Natalia Ong Art" />
@@ -103,12 +140,7 @@ function Home({ theme }) {
       <img style={styles.image} src={Star10} alt="Natalia Ong Art" />
       <br />
       <img style={styles.image} src={Star11} alt="Natalia Ong Art" />
-      <Header
-        id="glu"
-        title="Glu Mobile"
-        showSeparator="true"
-        theme={theme}
-      />
+      <Header id="glu" title="Glu Mobile" showSeparator="true" theme={theme} />
       <img style={styles.image} src={Glu1} alt="Natalia Ong Art" />
       <br />
       <img style={styles.image} src={Glu2} alt="Natalia Ong Art" />
@@ -166,17 +198,5 @@ function Home({ theme }) {
     </div>
   );
 }
-
-const styles = {
-  container: {
-    textAlign: "center",
-  },
-  image: {
-    width: "99%",
-    maxWidth: "1000px",
-    height: "auto",
-    marginBottom: 15,
-  },
-};
 
 export default Home;
