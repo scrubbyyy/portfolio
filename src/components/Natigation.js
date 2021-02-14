@@ -1,4 +1,4 @@
-import { Nav, Navbar } from "react-bootstrap";
+import { Nav, NavDropdown, Navbar } from "react-bootstrap";
 import { colors, content } from "../Config.js";
 
 import { HashLink as Link } from "react-router-hash-link";
@@ -12,27 +12,34 @@ function Natigation() {
       </Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
-        <Nav
-          style={window.location.pathname === "/" ? null : { display: "none" }}
-          className="ml-auto"
-        >
-          <Link style={styles.secondaryNavItem} to="/#env">
-            Environments
-          </Link>
-          <Link style={styles.secondaryNavItem} to="/#starwars">
-            Star Wars: Commander
-          </Link>
-          <Link style={styles.secondaryNavItem} to="/#glu">
-            Glu Mobile
-          </Link>
-          <Link style={styles.secondaryNavItem} to="/#illustrations">
-            Illustrations
-          </Link>
-        </Nav>
         <Nav className="ml-auto">
-          <Nav.Link style={styles.mainNavItem} href="/">
-            Portfolio
-          </Nav.Link>
+          <NavDropdown
+            title={<span style={styles.mainNavItem}>Portfolio</span>}
+          >
+            <NavDropdown.Item>
+              <Link style={styles.secondaryNavItem} to="/#env">
+                Environments
+              </Link>
+            </NavDropdown.Item>
+            <NavDropdown.Divider />
+            <NavDropdown.Item>
+              <Link style={styles.secondaryNavItem} to="/#starwars">
+                Star Wars: Commander
+              </Link>
+            </NavDropdown.Item>
+            <NavDropdown.Divider />
+            <NavDropdown.Item>
+              <Link style={styles.secondaryNavItem} to="/#glu">
+                Glu Mobile
+              </Link>
+            </NavDropdown.Item>
+            <NavDropdown.Divider />
+            <NavDropdown.Item>
+              <Link style={styles.secondaryNavItem} to="/#illustrations">
+                Illustrations
+              </Link>
+            </NavDropdown.Item>
+          </NavDropdown>
           <Nav.Link style={styles.mainNavItem} href="/#/projects">
             Projects
           </Nav.Link>
