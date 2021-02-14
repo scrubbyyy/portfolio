@@ -163,6 +163,7 @@ const styles = {
     width: "99%",
     maxWidth: "1000px",
     height: "auto",
+    marginBottom: 15,
   },
 };
 
