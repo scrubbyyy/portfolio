@@ -6,7 +6,10 @@ function AboutMe() {
   return (
     <div style={styles.container}>
       <Header title="About Me" />
+      <br />
       <p style={styles.content}>{content.aboutMe}</p>
+      <p style={styles.content}>Thanks for checking out my portfolio!</p>
+      <br />
     </div>
   );
 }
