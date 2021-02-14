@@ -15,7 +15,11 @@ function Home() {
       <img style={styles.image} src={Environment1} alt="TODO" />
       <br />
       <img style={styles.image} src={Environment2} alt="TODO" />
-      <Header id="starwars" title="Star Wars: Commander" shrinkSeparator="true" />
+      <Header
+        id="starwars"
+        title="Star Wars: Commander"
+        shrinkSeparator="true"
+      />
       <img style={styles.image} src={StarWars1} alt="TODO" />
       <br />
       <img style={styles.image} src={StarWars2} alt="TODO" />

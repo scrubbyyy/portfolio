@@ -11,9 +11,7 @@ function Natigation() {
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav
-          style={
-            window.location.pathname === "/" ? null : { display: "none" }
-          }
+          style={window.location.pathname === "/" ? null : { display: "none" }}
           className="ml-auto"
           defaultActiveKey="#env"
           variant="tabs"

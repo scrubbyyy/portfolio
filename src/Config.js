@@ -18,4 +18,4 @@ export const links = {
   linkedin: "https://www.linkedin.com/in/nataliaong/",
   artstation: "https://www.artstation.com/scrubbyyy",
   instagram: "https://www.instagram.com/scrubbbyyy/?hl=en",
-}
+};

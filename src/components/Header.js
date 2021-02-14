@@ -4,7 +4,9 @@ function Header({ id, title, shrinkSeparator }) {
   return (
     <>
       <div style={styles.anchor} id={id} />
-      <hr style={shrinkSeparator ? styles.shrunkenSeparator : styles.separator} />
+      <hr
+        style={shrinkSeparator ? styles.shrunkenSeparator : styles.separator}
+      />
       <h2 style={styles.header}>{title}</h2>
     </>
   );
