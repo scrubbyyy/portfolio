@@ -14,7 +14,7 @@ function Natigation({ theme, isDarkMode, darkModeHandler }) {
 
     setVisible(
       (prevScrollPos > currentScrollPos &&
-        prevScrollPos - currentScrollPos > 70) ||
+        prevScrollPos - currentScrollPos > 10) ||
         currentScrollPos < 10
     );
 
@@ -31,7 +31,7 @@ function Natigation({ theme, isDarkMode, darkModeHandler }) {
     navBar: {
       backgroundColor: theme.navBackground,
       top: visible ? 0 : -1000,
-      transition: 'top 2s' 
+      transition: 'top 0.6s' 
     },
     title: {
       fontSize: 25,
