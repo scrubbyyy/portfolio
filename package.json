@@ -2,13 +2,15 @@
   "name": "nataliaongportfolio",
   "version": "0.1.0",
   "private": true,
-  "homepage": "./",
+  "homepage": "https://acschott526.github.io/nataliaongportfolio",
   "dependencies": {
+    "gh-pages": "^3.1.0",
     "immer": "8.0.1",
     "react": "^17.0.1",
     "react-bootstrap": "^1.4.3",
     "react-dom": "^17.0.1",
     "react-router-dom": "^5.2.0",
+    "react-router-hash-link": "^2.4.0",
     "react-scripts": "4.0.2"
   },
   "scripts": {
@@ -16,7 +18,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "bundle": "rm -r docs; mkdir docs; cp -r build/* docs/"
+    "predeploy": "yarn build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [

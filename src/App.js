@@ -1,4 +1,4 @@
-import { Route, BrowserRouter as Router, Switch } from "react-router-dom";
+import { Route, HashRouter as Router, Switch } from "react-router-dom";
 
 import AboutMe from "./pages/AboutMe.js";
 import Home from "./pages/Home.js";
@@ -10,7 +10,7 @@ import SocialMediaLinks from "./components/SocialMediaLinks.js";
 function App() {
   return (
     <>
-      <Router>
+      <Router basename='/'>
         <Natigation />
         <Switch>
           <Route exact path="/">

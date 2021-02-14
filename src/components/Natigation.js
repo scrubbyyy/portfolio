@@ -1,6 +1,8 @@
 import { Nav, Navbar } from "react-bootstrap";
 import { colors, content } from "../Config.js";
 
+import { HashLink as Link } from "react-router-hash-link";
+
 function Natigation() {
   return (
     <Navbar expand="lg" sticky="top" bg="light">
@@ -11,35 +13,33 @@ function Natigation() {
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav
-          style={window.location.pathname === "/" ? null : { display: "none" }}
+          style={window.location.pathname === "/nataliaongportfolio/" ? null : { display: "none" }}
           className="ml-auto"
-          defaultActiveKey="#env"
-          variant="tabs"
         >
-          <Nav.Link style={styles.secondaryNavItem} href="#env">
+          <Link style={styles.secondaryNavItem} to="/#env">
             Environments
-          </Nav.Link>
-          <Nav.Link style={styles.secondaryNavItem} href="#starwars">
+          </Link>
+          <Link style={styles.secondaryNavItem} to="/#starwars">
             Star Wars: Commander
-          </Nav.Link>
-          <Nav.Link style={styles.secondaryNavItem} href="#glu">
+          </Link>
+          <Link style={styles.secondaryNavItem} to="/#glu">
             Glu Mobile
-          </Nav.Link>
-          <Nav.Link style={styles.secondaryNavItem} href="#illustrations">
+          </Link>
+          <Link style={styles.secondaryNavItem} to="/#illustrations">
             Illustrations
-          </Nav.Link>
+          </Link>
         </Nav>
         <Nav className="ml-auto">
-          <Nav.Link style={styles.mainNavItem} href="/">
+          <Nav.Link style={styles.mainNavItem} href="/nataliaongportfolio/">
             Portfolio
           </Nav.Link>
-          <Nav.Link style={styles.mainNavItem} href="/projects">
+          <Nav.Link style={styles.mainNavItem} href="/nataliaongportfolio/#/projects">
             Projects
           </Nav.Link>
-          <Nav.Link style={styles.mainNavItem} href="/resume">
+          <Nav.Link style={styles.mainNavItem} href="/nataliaongportfolio/#/resume">
             Resume
           </Nav.Link>
-          <Nav.Link style={styles.mainNavItem} href="/about-me">
+          <Nav.Link style={styles.mainNavItem} href="/nataliaongportfolio/#/about-me">
             About Me
           </Nav.Link>
         </Nav>
@@ -67,6 +67,7 @@ const styles = {
   secondaryNavItem: {
     color: colors.secondaryNavFont,
     fontSize: 14,
+    margin: 5,
   },
 };
 
