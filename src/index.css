@@ -40,5 +40,10 @@ a:hover {
 
 /* Set background color of dropdown menu to something that works for light/dark mode */
 .navbar-nav .dropdown-menu {
-  background-color: #c0c3c4
+  background-color: #dbdbdb
+}
+
+/* Center cards */
+.card {
+  margin: 0 auto;
 }

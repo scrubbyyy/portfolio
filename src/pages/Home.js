@@ -1,3 +1,4 @@
+import { Card } from "react-bootstrap";
 import Env1 from "../images/home/OngNataliaPortfolio20212.jpg";
 import Env10 from "../images/home/OngNataliaPortfolio202111.jpg";
 import Env11 from "../images/home/OngNataliaPortfolio202112.jpg";
@@ -55,7 +56,7 @@ function Home({ theme }) {
       textAlign: "center",
     },
     image: {
-      width: "99%",
+      width: "98%",
       maxWidth: "1000px",
       height: "auto",
       marginBottom: 15,
@@ -70,51 +71,60 @@ function Home({ theme }) {
     navContainer: {
       display: "inline-flex",
       alignItems: "center",
-      marginTop: 20,
-      marginBottom: 10,
     },
   };
 
   return (
     <div style={styles.container}>
-      <div style={styles.navContainer}>
-        <Link style={styles.navItem} to="/#env">
-          Environments
-        </Link>
-        <Link style={styles.navItem} to="/#starwars">
-          Star Wars: Commander
-        </Link>
-        <Link style={styles.navItem} to="/#glu">
-          Glu Mobile
-        </Link>
-        <Link style={styles.navItem} to="/#illustrations">
-          Illustrations
-        </Link>
-      </div>
-      <br />
+      <Card
+        style={{
+          marginTop: 10,
+          marginBottom: 10,
+          maxWidth: "1000px",
+          borderColor: theme.separator,
+        }}
+      >
+        <Card.Header
+          as="h4"
+          style={{
+            textAlign: "center",
+            backgroundColor: theme.navBackground,
+            color: theme.mainFont,
+            fontFamily: "Helvetica-Bold",
+          }}
+        >
+          Quicklinks
+        </Card.Header>
+        <Card.Body style={{ backgroundColor: theme.background }}>
+          <div style={styles.navContainer}>
+            <Link style={styles.navItem} to="/#env">
+              Environments
+            </Link>
+            <Link style={styles.navItem} to="/#starwars">
+              Star Wars: Commander
+            </Link>
+            <Link style={styles.navItem} to="/#glu">
+              Glu Mobile
+            </Link>
+            <Link style={styles.navItem} to="/#illustrations">
+              Illustrations
+            </Link>
+          </div>
+        </Card.Body>
+      </Card>
+
       <Header id="env" title="Environments" theme={theme} />
       <img style={styles.image} src={Env1} alt="Natalia Ong Art" />
-      <br />
       <img style={styles.image} src={Env2} alt="Natalia Ong Art" />
-      <br />
       <img style={styles.image} src={Env3} alt="Natalia Ong Art" />
-      <br />
       <img style={styles.image} src={Env4} alt="Natalia Ong Art" />
-      <br />
       <img style={styles.image} src={Env5} alt="Natalia Ong Art" />
-      <br />
       <img style={styles.image} src={Env6} alt="Natalia Ong Art" />
-      <br />
       <img style={styles.image} src={Env7} alt="Natalia Ong Art" />
-      <br />
       <img style={styles.image} src={Env8} alt="Natalia Ong Art" />
-      <br />
       <img style={styles.image} src={Env9} alt="Natalia Ong Art" />
-      <br />
       <img style={styles.image} src={Env10} alt="Natalia Ong Art" />
-      <br />
       <img style={styles.image} src={Env11} alt="Natalia Ong Art" />
-      <br />
       <img style={styles.image} src={Env12} alt="Natalia Ong Art" />
       <Header
         id="starwars"
@@ -123,61 +133,34 @@ function Home({ theme }) {
         theme={theme}
       />
       <img style={styles.image} src={Star1} alt="Natalia Ong Art" />
-      <br />
       <img style={styles.image} src={Star2} alt="Natalia Ong Art" />
-      <br />
       <img style={styles.image} src={Star3} alt="Natalia Ong Art" />
-      <br />
       <img style={styles.image} src={Star4} alt="Natalia Ong Art" />
-      <br />
       <img style={styles.image} src={Star5} alt="Natalia Ong Art" />
-      <br />
       <img style={styles.image} src={Star6} alt="Natalia Ong Art" />
-      <br />
       <img style={styles.image} src={Star7} alt="Natalia Ong Art" />
-      <br />
       <img style={styles.image} src={Star8} alt="Natalia Ong Art" />
-      <br />
       <img style={styles.image} src={Star9} alt="Natalia Ong Art" />
-      <br />
       <img style={styles.image} src={Star10} alt="Natalia Ong Art" />
-      <br />
       <img style={styles.image} src={Star11} alt="Natalia Ong Art" />
       <Header id="glu" title="Glu Mobile" showSeparator="true" theme={theme} />
       <img style={styles.image} src={Glu1} alt="Natalia Ong Art" />
-      <br />
       <img style={styles.image} src={Glu2} alt="Natalia Ong Art" />
-      <br />
       <img style={styles.image} src={Glu3} alt="Natalia Ong Art" />
-      <br />
       <img style={styles.image} src={Glu4} alt="Natalia Ong Art" />
-      <br />
       <img style={styles.image} src={Glu5} alt="Natalia Ong Art" />
-      <br />
       <img style={styles.image} src={Glu6} alt="Natalia Ong Art" />
-      <br />
       <img style={styles.image} src={Glu7} alt="Natalia Ong Art" />
-      <br />
       <img style={styles.image} src={Glu8} alt="Natalia Ong Art" />
-      <br />
       <img style={styles.image} src={Glu9} alt="Natalia Ong Art" />
-      <br />
       <img style={styles.image} src={Glu10} alt="Natalia Ong Art" />
-      <br />
       <img style={styles.image} src={Glu11} alt="Natalia Ong Art" />
-      <br />
       <img style={styles.image} src={Glu12} alt="Natalia Ong Art" />
-      <br />
       <img style={styles.image} src={Glu13} alt="Natalia Ong Art" />
-      <br />
       <img style={styles.image} src={Glu14} alt="Natalia Ong Art" />
-      <br />
       <img style={styles.image} src={Glu15} alt="Natalia Ong Art" />
-      <br />
       <img style={styles.image} src={Glu16} alt="Natalia Ong Art" />
-      <br />
       <img style={styles.image} src={Glu17} alt="Natalia Ong Art" />
-      <br />
       <img style={styles.image} src={Glu18} alt="Natalia Ong Art" />
       <Header
         id="illustrations"
@@ -186,17 +169,11 @@ function Home({ theme }) {
         theme={theme}
       />
       <img style={styles.image} src={Illust1} alt="Natalia Ong Art" />
-      <br />
       <img style={styles.image} src={Illust2} alt="Natalia Ong Art" />
-      <br />
       <img style={styles.image} src={Illust3} alt="Natalia Ong Art" />
-      <br />
       <img style={styles.image} src={Illust4} alt="Natalia Ong Art" />
-      <br />
       <img style={styles.image} src={Illust5} alt="Natalia Ong Art" />
-      <br />
       <img style={styles.image} src={Illust6} alt="Natalia Ong Art" />
-      <br />
       <img style={styles.image} src={Illust7} alt="Natalia Ong Art" />
     </div>
   );

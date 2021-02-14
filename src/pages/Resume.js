@@ -1,5 +1,5 @@
 import { Button } from "react-bootstrap";
-import Header from "../components/Header.js";
+import { Card } from "react-bootstrap";
 import ResumePdf from "../images/resume/OngNataliaResume2021.pdf";
 import ResumePng from "../images/resume/OngNataliaResume2021.png";
 import SocialMediaLinks from "../components/SocialMediaLinks.js";
@@ -11,7 +11,7 @@ function Resume({ theme, isDarkMode }) {
       textAlign: "center",
     },
     image: {
-      width: "99%",
+      width: "98%",
       maxWidth: "1000px",
       height: "auto",
     },
@@ -23,20 +23,43 @@ function Resume({ theme, isDarkMode }) {
   };
 
   return (
-    <div style={styles.container}>
-      <br />
-      <Header title="Resume" theme={theme} />
-      <p style={styles.content}>{content.aboutMe}</p>
-      <p style={styles.content}>Thanks for checking out my portfolio!</p>
-      <SocialMediaLinks isDarkMode={isDarkMode} />
-      <br />
-      <a href={ResumePdf} download>
-        <Button variant="link">Natalia Ong Resume.pdf</Button>
-      </a>
-      <br />
-      <br />
-      <img style={styles.image} src={ResumePng} alt="Resume" />
-    </div>
+    <>
+      <div style={styles.container}>
+        <Card
+          style={{
+            marginTop: 10,
+            marginBottom: 10,
+            maxWidth: "1000px",
+            borderColor: theme.separator,
+          }}
+        >
+          <Card.Header
+            as="h4"
+            style={{
+              textAlign: "center",
+              backgroundColor: theme.navBackground,
+              color: theme.mainFont,
+              fontFamily: "Helvetica-Bold",
+            }}
+          >
+            Resume
+          </Card.Header>
+          <Card.Body style={{ backgroundColor: theme.background }}>
+            <Card.Text style={{ color: theme.secondaryFont }}>
+              {content.aboutMe}
+            </Card.Text>
+            <Card.Text style={{ color: theme.secondaryFont }}>
+              Thanks for checking out my portfolio!
+            </Card.Text>
+            <SocialMediaLinks isDarkMode={isDarkMode} />
+            <a href={ResumePdf} download>
+              <Button variant="link">Natalia Ong Resume.pdf</Button>
+            </a>
+          </Card.Body>
+        </Card>
+        <img style={styles.image} src={ResumePng} alt="Resume" />
+      </div>
+    </>
   );
 }
 

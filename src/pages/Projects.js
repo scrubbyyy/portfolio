@@ -1,4 +1,4 @@
-import Header from "../components/Header.js";
+import { Card } from "react-bootstrap";
 import LolByte1 from "../images/projects/LolBytePortfolio1.jpg";
 import LolByte2 from "../images/projects/LolBytePortfolio2.jpg";
 import LolByte3 from "../images/projects/LolBytePortfolio3.jpg";
@@ -16,23 +16,47 @@ function Projects({ theme }) {
       marginRight: 25,
     },
     image: {
-      width: "99%",
+      width: "98%",
       maxWidth: "1000px",
       height: "auto",
-      margin: 20,
+      marginBottom: 20,
     },
   };
 
   return (
-    <div style={styles.container}>
-      <br />
-      <Header title="LolByte" theme={theme} />
-      <p style={styles.description}>{content.lolbyte}</p>
-      <img style={styles.image} src={LolByte1} alt="Natalia Ong Art" />
-      <img style={styles.image} src={LolByte2} alt="Natalia Ong Art" />
-      <img style={styles.image} src={LolByte3} alt="Natalia Ong Art" />
-      <img style={styles.image} src={LolByte4} alt="Natalia Ong Art" />
-    </div>
+    <>
+      <Card
+        style={{
+          marginTop: 10,
+          marginBottom: 10,
+          maxWidth: "1000px",
+          borderColor: theme.separator,
+        }}
+      >
+        <Card.Header
+          as="h4"
+          style={{
+            textAlign: "center",
+            backgroundColor: theme.navBackground,
+            color: theme.mainFont,
+            fontFamily: "Helvetica-Bold",
+          }}
+        >
+          LolByte
+        </Card.Header>
+        <Card.Body style={{ backgroundColor: theme.background }}>
+          <Card.Text style={{ color: theme.secondaryFont }}>
+            {content.lolbyte}
+          </Card.Text>
+        </Card.Body>
+      </Card>
+      <div style={styles.container}>
+        <img style={styles.image} src={LolByte1} alt="Natalia Ong Art" />
+        <img style={styles.image} src={LolByte2} alt="Natalia Ong Art" />
+        <img style={styles.image} src={LolByte3} alt="Natalia Ong Art" />
+        <img style={styles.image} src={LolByte4} alt="Natalia Ong Art" />
+      </div>
+    </>
   );
 }
 
