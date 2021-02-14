@@ -17,6 +17,8 @@ const styles = {
   },
   content: {
     color: colors.secondaryFont,
+    marginLeft: 25,
+    marginRight: 25,
   },
 };
 

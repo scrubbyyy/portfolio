@@ -22,6 +22,8 @@ const styles = {
   },
   description: {
     color: colors.secondaryFont,
+    marginLeft: 25,
+    marginRight: 25,
   },
   image: {
     width: "99%",
