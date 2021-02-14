@@ -1,11 +1,5 @@
 function Header({ id, title, showSeparator, theme }) {
   const styles = {
-    anchor: {
-      display: "block",
-      position: "relative",
-      top: -85,
-      visibility: "hidden",
-    },
     hide: {
       display: "none",
     },
@@ -23,9 +17,10 @@ function Header({ id, title, showSeparator, theme }) {
 
   return (
     <>
-      <div style={styles.anchor} id={id} />
       <hr style={showSeparator ? styles.separator : styles.hide} />
-      <h2 style={styles.header}>{title}</h2>
+      <h2 style={styles.header} id={id}>
+        {title}
+      </h2>
     </>
   );
 }

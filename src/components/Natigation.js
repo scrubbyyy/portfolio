@@ -1,7 +1,8 @@
-import { Nav, Navbar } from "react-bootstrap";
+import { Nav, NavDropdown, Navbar } from "react-bootstrap";
 import { useEffect, useState } from "react";
 
 import DarkModeToggle from "react-dark-mode-toggle";
+import { HashLink as Link } from "react-router-hash-link";
 import { content } from "../Config.js";
 
 function Natigation({ theme, isDarkMode, darkModeHandler }) {
@@ -31,7 +32,7 @@ function Natigation({ theme, isDarkMode, darkModeHandler }) {
     navBar: {
       backgroundColor: theme.navBackground,
       top: visible ? 0 : -1000,
-      transition: 'top 0.6s' 
+      transition: "top 0.6s",
     },
     title: {
       fontSize: 25,
@@ -47,6 +48,11 @@ function Natigation({ theme, isDarkMode, darkModeHandler }) {
     navItem: {
       color: theme.navFont,
       fontFamily: "Helvetica-Bold",
+    },
+    secondaryNavItem: {
+      color: "#1e1e1e",
+      fontSize: 14,
+      display: "block",
     },
     darkModeToggleContainer: {
       flex: 1,
@@ -79,13 +85,47 @@ function Natigation({ theme, isDarkMode, darkModeHandler }) {
       />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="ml-auto">
-          <Nav.Link
-            onClick={() => setExpanded(false)}
-            style={styles.navItem}
-            href="/"
-          >
-            Portfolio
-          </Nav.Link>
+          <NavDropdown title={<span style={styles.navItem}>Portfolio</span>}>
+            <NavDropdown.Item>
+              <Link
+                onClick={() => setExpanded(false)}
+                style={styles.secondaryNavItem}
+                to="/#env"
+              >
+                Environments
+              </Link>
+            </NavDropdown.Item>
+            <NavDropdown.Divider />
+            <NavDropdown.Item>
+              <Link
+                onClick={() => setExpanded(false)}
+                style={styles.secondaryNavItem}
+                to="/#starwars"
+              >
+                Star Wars: Commander
+              </Link>
+            </NavDropdown.Item>
+            <NavDropdown.Divider />
+            <NavDropdown.Item>
+              <Link
+                onClick={() => setExpanded(false)}
+                style={styles.secondaryNavItem}
+                to="/#glu"
+              >
+                Glu Mobile
+              </Link>
+            </NavDropdown.Item>
+            <NavDropdown.Divider />
+            <NavDropdown.Item>
+              <Link
+                onClick={() => setExpanded(false)}
+                style={styles.secondaryNavItem}
+                to="/#illustrations"
+              >
+                Illustrations
+              </Link>
+            </NavDropdown.Item>
+          </NavDropdown>
           <Nav.Link
             onClick={() => setExpanded(false)}
             style={styles.navItem}
