@@ -16,7 +16,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "bundle": "rm -r docs; mkdir docs; cp -r build docs"
+    "bundle": "rm -r docs; mkdir docs; cp -r build/* docs/"
   },
   "eslintConfig": {
     "extends": [
