@@ -12,6 +12,7 @@ function Header({ id, title, showSeparator, theme }) {
     },
     header: {
       color: theme.headerFont,
+      fontFamily: "Helvetica-Bold"
     },
   };
 
