@@ -37,6 +37,7 @@ function SocialMediaLinks({ isDarkMode }) {
 const styles = {
   container: {
     textAlign: "center",
+    marginTop: 10,
   },
   image: {
     marginTop: 5,
