@@ -1,13 +1,38 @@
 import { Nav, Navbar } from "react-bootstrap";
+import { useEffect, useState } from "react";
 
 import DarkModeToggle from "react-dark-mode-toggle";
 import { content } from "../Config.js";
-import { useState } from "react";
 
 function Natigation({ theme, isDarkMode, darkModeHandler }) {
   const [expanded, setExpanded] = useState(false);
+  const [prevScrollPos, setPrevScrollPos] = useState(0);
+  const [visible, setVisible] = useState(true);
+
+  const handleScroll = debounce(() => {
+    const currentScrollPos = window.pageYOffset;
+
+    setVisible(
+      (prevScrollPos > currentScrollPos &&
+        prevScrollPos - currentScrollPos > 70) ||
+        currentScrollPos < 10
+    );
+
+    setPrevScrollPos(currentScrollPos);
+  }, 100);
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [prevScrollPos, visible, handleScroll]);
 
   const styles = {
+    navBar: {
+      backgroundColor: theme.navBackground,
+      top: visible ? 0 : -1000,
+      transition: 'top 2s' 
+    },
     title: {
       fontSize: 25,
       color: theme.mainFont,
@@ -33,7 +58,7 @@ function Natigation({ theme, isDarkMode, darkModeHandler }) {
       expand="lg"
       sticky="top"
       variant={isDarkMode ? "dark" : "light"}
-      style={{ backgroundColor: theme.navBackground }}
+      style={styles.navBar}
       expanded={expanded}
     >
       <Navbar.Brand href="/">
@@ -79,6 +104,22 @@ function Natigation({ theme, isDarkMode, darkModeHandler }) {
       </Navbar.Collapse>
     </Navbar>
   );
+}
+
+function debounce(func, wait, immediate) {
+  var timeout;
+  return function () {
+    var context = this,
+      args = arguments;
+    var later = function () {
+      timeout = null;
+      if (!immediate) func.apply(context, args);
+    };
+    var callNow = immediate && !timeout;
+    clearTimeout(timeout);
+    timeout = setTimeout(later, wait);
+    if (callNow) func.apply(context, args);
+  };
 }
 
 export default Natigation;
