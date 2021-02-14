@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/static/css/main.6da7b08d.chunk.css",
-    "main.js": "/static/js/main.2d7ba237.chunk.js",
-    "main.js.map": "/static/js/main.2d7ba237.chunk.js.map",
+    "main.js": "/static/js/main.004bc73b.chunk.js",
+    "main.js.map": "/static/js/main.004bc73b.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.c2220bc7.js",
     "runtime-main.js.map": "/static/js/runtime-main.c2220bc7.js.map",
-    "static/js/2.2e627772.chunk.js": "/static/js/2.2e627772.chunk.js",
-    "static/js/2.2e627772.chunk.js.map": "/static/js/2.2e627772.chunk.js.map",
+    "static/js/2.5b93672d.chunk.js": "/static/js/2.5b93672d.chunk.js",
+    "static/js/2.5b93672d.chunk.js.map": "/static/js/2.5b93672d.chunk.js.map",
     "index.html": "/index.html",
     "static/css/main.6da7b08d.chunk.css.map": "/static/css/main.6da7b08d.chunk.css.map",
-    "static/js/2.2e627772.chunk.js.LICENSE.txt": "/static/js/2.2e627772.chunk.js.LICENSE.txt",
+    "static/js/2.5b93672d.chunk.js.LICENSE.txt": "/static/js/2.5b93672d.chunk.js.LICENSE.txt",
     "static/media/index.css": "/static/media/Helvetica.06113bf7.ttf",
     "static/media/OngNataliaPortfolio202110.eca1914a.jpg": "/static/media/OngNataliaPortfolio202110.eca1914a.jpg",
     "static/media/OngNataliaPortfolio202111.fb46ce63.jpg": "/static/media/OngNataliaPortfolio202111.fb46ce63.jpg",
@@ -69,8 +69,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.c2220bc7.js",
-    "static/js/2.2e627772.chunk.js",
+    "static/js/2.5b93672d.chunk.js",
     "static/css/main.6da7b08d.chunk.css",
-    "static/js/main.2d7ba237.chunk.js"
+    "static/js/main.004bc73b.chunk.js"
   ]
 }
