@@ -4,8 +4,8 @@ import ResumePdf from "../images/resume/OngNataliaResume2021.png";
 function Resume() {
   return (
     <div style={styles.container}>
-      <Header title={"Resume"} />
-      <img src={ResumePdf} width="60%" height="auto" alt="Resume" />
+      <Header title="Resume" />
+      <img style={styles.image} src={ResumePdf} alt="Resume" />
     </div>
   );
 }
@@ -13,6 +13,11 @@ function Resume() {
 const styles = {
   container: {
     textAlign: "center",
+  },
+  image: {
+    width: "99%",
+    maxWidth: "1000px",
+    height: "auto",
   },
 };
 

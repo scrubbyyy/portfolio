@@ -6,9 +6,9 @@ import LolByte1 from "../images/projects/OngNataliaPortfolio202036.jpg";
 function Projects() {
   return (
     <div style={styles.container}>
-      <Header title={"LolByte"} />
+      <Header title="LolByte" />
       <p style={styles.description}>{content.lolbyte}</p>
-      <img style={styles.image} src={LolByte1} alt={"TODO"} />
+      <img style={styles.image} src={LolByte1} alt="TODO" />
     </div>
   );
 }
@@ -21,7 +21,8 @@ const styles = {
     color: colors.secondaryFont,
   },
   image: {
-    width: "60%",
+    width: "99%",
+    maxWidth: "1000px",
     height: "auto",
   },
 };

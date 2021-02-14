@@ -15,15 +15,15 @@ function Home() {
       <img style={styles.image} src={Environment1} alt="TODO" />
       <br />
       <img style={styles.image} src={Environment2} alt="TODO" />
-      <Header id="starwars" title="Star Wars: Commander" />
+      <Header id="starwars" title="Star Wars: Commander" shrinkSeparator="true" />
       <img style={styles.image} src={StarWars1} alt="TODO" />
       <br />
       <img style={styles.image} src={StarWars2} alt="TODO" />
-      <Header id="glu" title="Glu Mobile" />
+      <Header id="glu" title="Glu Mobile" shrinkSeparator="true" />
       <img style={styles.image} src={Glu1} alt="TODO" />
       <br />
       <img style={styles.image} src={Glu2} alt="TODO" />
-      <Header id="personal" title="Personal Work" />
+      <Header id="personal" title="Personal Work" shrinkSeparator="true" />
       <img style={styles.image} src={Personal1} alt="TODO" />
       <br />
       <img style={styles.image} src={Personal2} alt="TODO" />
@@ -36,7 +36,8 @@ const styles = {
     textAlign: "center",
   },
   image: {
-    width: "60%",
+    width: "99%",
+    maxWidth: "1000px",
     height: "auto",
   },
 };

@@ -5,6 +5,7 @@ import Home from "./pages/Home.js";
 import Natigation from "./components/Natigation.js";
 import Projects from "./pages/Projects.js";
 import Resume from "./pages/Resume.js";
+import SocialMediaLinks from "./components/SocialMediaLinks.js";
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
             <Resume />
           </Route>
         </Switch>
+        <SocialMediaLinks />
       </Router>
     </>
   );
