@@ -76,7 +76,7 @@ function Natigation({ theme, isDarkMode, darkModeHandler }) {
           onChange={darkModeHandler}
           checked={isDarkMode}
           size={45}
-          speed={10}
+          speed={3}
         />
       </div>
       <Navbar.Toggle
