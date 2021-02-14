@@ -25,8 +25,8 @@ function Natigation() {
           <Nav.Link style={styles.secondaryNavItem} href="#glu">
             Glu Mobile
           </Nav.Link>
-          <Nav.Link style={styles.secondaryNavItem} href="#personal">
-            Personal Work
+          <Nav.Link style={styles.secondaryNavItem} href="#illustrations">
+            Illustrations
           </Nav.Link>
         </Nav>
         <Nav className="ml-auto">
