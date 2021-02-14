@@ -9,7 +9,7 @@ import { colors } from "./Config.js";
 import { useState } from "react";
 
 function App() {
-  const [isDarkMode, setIsDarkMode] = useLocalStorage("darkmode", () => false);
+  const [isDarkMode, setIsDarkMode] = useLocalStorage("darkmode", false);
   const darkModeHandler = () => {
     setIsDarkMode(!isDarkMode);
   };
