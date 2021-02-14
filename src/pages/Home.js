@@ -62,13 +62,16 @@ function Home({ theme }) {
     },
     navItem: {
       color: theme.secondaryFont,
-      fontSize: 14,
+      fontSize: 16,
       display: "block",
       margin: 5,
+      textDecoration: "underline",
     },
     navContainer: {
       display: "inline-flex",
       alignItems: "center",
+      marginTop: 20,
+      marginBottom: 10,
     },
   };
 
