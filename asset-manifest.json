@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/static/css/main.6119c124.chunk.css",
-    "main.js": "/static/js/main.57c7c33b.chunk.js",
-    "main.js.map": "/static/js/main.57c7c33b.chunk.js.map",
+    "main.js": "/static/js/main.5856f361.chunk.js",
+    "main.js.map": "/static/js/main.5856f361.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.c2220bc7.js",
     "runtime-main.js.map": "/static/js/runtime-main.c2220bc7.js.map",
     "static/js/2.0edef42c.chunk.js": "/static/js/2.0edef42c.chunk.js",
@@ -32,19 +32,19 @@
     "static/media/index.css": "/static/media/Helvetica.06113bf7.ttf",
     "static/media/OngNataliaResume2021.5ac23b15.pdf": "/static/media/OngNataliaResume2021.5ac23b15.pdf",
     "static/media/OngNataliaResume2021.ec76f24c.png": "/static/media/OngNataliaResume2021.ec76f24c.png",
-    "static/media/artstation.fee51861.svg": "/static/media/artstation.fee51861.svg",
-    "static/media/artstation_dark.27f57f82.svg": "/static/media/artstation_dark.27f57f82.svg",
-    "static/media/gmail.64a1150e.svg": "/static/media/gmail.64a1150e.svg",
-    "static/media/gmail_dark.c3c42052.svg": "/static/media/gmail_dark.c3c42052.svg",
-    "static/media/instagram.11ba7c53.svg": "/static/media/instagram.11ba7c53.svg",
-    "static/media/instagram_dark.e2a59c2a.svg": "/static/media/instagram_dark.e2a59c2a.svg",
-    "static/media/linkedin.f60c5c31.svg": "/static/media/linkedin.f60c5c31.svg",
-    "static/media/linkedin_dark.d0ec1d31.svg": "/static/media/linkedin_dark.d0ec1d31.svg"
+    "static/media/artstation.dd8fd49c.svg": "/static/media/artstation.dd8fd49c.svg",
+    "static/media/artstation_dark.a95acddd.svg": "/static/media/artstation_dark.a95acddd.svg",
+    "static/media/email.9f548112.svg": "/static/media/email.9f548112.svg",
+    "static/media/email_dark.1efe4a62.svg": "/static/media/email_dark.1efe4a62.svg",
+    "static/media/instagram.bca137c4.svg": "/static/media/instagram.bca137c4.svg",
+    "static/media/instagram_dark.0082993e.svg": "/static/media/instagram_dark.0082993e.svg",
+    "static/media/linkedin.77560a42.svg": "/static/media/linkedin.77560a42.svg",
+    "static/media/linkedin_dark.ab5d03aa.svg": "/static/media/linkedin_dark.ab5d03aa.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.c2220bc7.js",
     "static/js/2.0edef42c.chunk.js",
     "static/css/main.6119c124.chunk.css",
-    "static/js/main.57c7c33b.chunk.js"
+    "static/js/main.5856f361.chunk.js"
   ]
 }
