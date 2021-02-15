@@ -13,7 +13,7 @@ function SocialMediaLinks({ isDarkMode }) {
 
   const Links = socialLinks.links.map((link) => {
     return (
-      <a href={link.url} target="_blank" rel="noreferrer">
+      <a href={link.url} key={link.url} target="_blank" rel="noreferrer">
         <img
           style={styles.link}
           src={isDarkMode ? link.darkModeIcon : link.icon}
@@ -22,7 +22,7 @@ function SocialMediaLinks({ isDarkMode }) {
       </a>
     );
   });
-  
+
   return <div style={styles.container}>{Links}</div>;
 }
 

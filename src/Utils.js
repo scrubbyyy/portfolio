@@ -24,7 +24,12 @@ export function importAll(r) {
 export function createImageComponents(images) {
   return images.map((image) => {
     return (
-      <img style={styles.image} src={image.default} alt="Natalia Ong Art" />
+      <img
+        style={styles.image}
+        key={image.default}
+        src={image.default}
+        alt="Natalia Ong Art"
+      />
     );
   });
 }
