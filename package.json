@@ -21,7 +21,7 @@
     "eject": "react-scripts eject",
     "predeploy": "yarn build",
     "deploy": "gh-pages -d build",
-    "natalia-mode": "git add --all; git commit -m \"Natalia Update\"; git push; yarn deploy;"
+    "natalia-mode": "git add --all && git commit -m \"Natalia Update\" && git push && yarn deploy"
   },
   "eslintConfig": {
     "extends": [
