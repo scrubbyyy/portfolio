@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import DarkModeToggle from "react-dark-mode-toggle";
 import { HashLink as Link } from "react-router-hash-link";
 import { content } from "../Config.js";
+import { debounce } from "../Utils.js";
 
 function Natigation({ theme, isDarkMode, darkModeHandler }) {
   const [expanded, setExpanded] = useState(false);
@@ -144,22 +145,6 @@ function Natigation({ theme, isDarkMode, darkModeHandler }) {
       </Navbar.Collapse>
     </Navbar>
   );
-}
-
-function debounce(func, wait, immediate) {
-  var timeout;
-  return function () {
-    var context = this,
-      args = arguments;
-    var later = function () {
-      timeout = null;
-      if (!immediate) func.apply(context, args);
-    };
-    var callNow = immediate && !timeout;
-    clearTimeout(timeout);
-    timeout = setTimeout(later, wait);
-    if (callNow) func.apply(context, args);
-  };
 }
 
 export default Natigation;

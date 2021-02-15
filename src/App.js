@@ -6,7 +6,7 @@ import Projects from "./pages/Projects.js";
 import Resume from "./pages/Resume.js";
 import SocialMediaLinks from "./components/SocialMediaLinks.js";
 import { colors } from "./Config.js";
-import { useState } from "react";
+import { useLocalStorage } from "./Utils.js";
 
 function App() {
   const [isDarkMode, setIsDarkMode] = useLocalStorage("darkmode", false);
@@ -19,12 +19,18 @@ function App() {
     theme = colors.darkMode;
   }
 
+  const styles = {
+    container: {
+      backgroundColor: theme.background,
+    },
+    socialLinks: {
+      paddingTop: 20,
+      paddingBottom: 20,
+    },
+  };
+
   return (
-    <div
-      style={{
-        backgroundColor: theme.background,
-      }}
-    >
+    <div style={styles.container}>
       <Router basename="/">
         <Natigation
           theme={theme}
@@ -42,35 +48,12 @@ function App() {
             <Resume theme={theme} isDarkMode={isDarkMode} />
           </Route>
         </Switch>
-        <SocialMediaLinks isDarkMode={isDarkMode} />
+        <div style={styles.socialLinks}>
+          <SocialMediaLinks isDarkMode={isDarkMode} />
+        </div>
       </Router>
     </div>
   );
-}
-
-function useLocalStorage(key, initialValue) {
-  const [storedValue, setStoredValue] = useState(() => {
-    try {
-      const item = window.localStorage.getItem(key);
-      return item ? JSON.parse(item) : initialValue;
-    } catch (error) {
-      console.log(error);
-      return initialValue;
-    }
-  });
-
-  const setValue = (value) => {
-    try {
-      const valueToStore =
-        value instanceof Function ? value(storedValue) : value;
-      setStoredValue(valueToStore);
-      window.localStorage.setItem(key, JSON.stringify(valueToStore));
-    } catch (error) {
-      console.log(error);
-    }
-  };
-
-  return [storedValue, setValue];
 }
 
 export default App;

@@ -42,8 +42,3 @@ a:hover {
 .navbar-nav .dropdown-menu {
   background-color: #dbdbdb
 }
-
-/* Center cards */
-.card {
-  margin: 0 auto;
-}
