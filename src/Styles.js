@@ -3,7 +3,9 @@ export const styles = {
     width: "98%",
     maxWidth: "1000px",
     height: "auto",
+    margin: "auto",
     marginBottom: 10,
+    display: "block",
   },
 };
 

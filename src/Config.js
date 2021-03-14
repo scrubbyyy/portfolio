@@ -1,5 +1,7 @@
 import Artstation from "./images/svg/artstation.svg";
 import ArtstationDark from "./images/svg/artstation_dark.svg";
+import Email from "./images/svg/email.svg";
+import EmailDark from "./images/svg/email_dark.svg";
 import Instagram from "./images/svg/instagram.svg";
 import InstagramDark from "./images/svg/instagram_dark.svg";
 import LinkedIn from "./images/svg/linkedin.svg";
@@ -61,6 +63,12 @@ export const socialLinks = {
       icon: Instagram,
       darkModeIcon: InstagramDark,
       title: "See my Instagram",
+    },
+    {
+      url: "mailto:nataliaong12@gmail.com",
+      icon: Email,
+      darkModeIcon: EmailDark,
+      title: "Email me",
     },
   ],
 };
