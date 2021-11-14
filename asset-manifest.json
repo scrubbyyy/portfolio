@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/static/css/main.5147c11d.chunk.css",
-    "main.js": "/static/js/main.9cc6e558.chunk.js",
-    "main.js.map": "/static/js/main.9cc6e558.chunk.js.map",
+    "main.js": "/static/js/main.82fff058.chunk.js",
+    "main.js.map": "/static/js/main.82fff058.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.c2220bc7.js",
     "runtime-main.js.map": "/static/js/runtime-main.c2220bc7.js.map",
-    "static/js/2.6c3d5f4e.chunk.js": "/static/js/2.6c3d5f4e.chunk.js",
-    "static/js/2.6c3d5f4e.chunk.js.map": "/static/js/2.6c3d5f4e.chunk.js.map",
+    "static/js/2.cc5a122a.chunk.js": "/static/js/2.cc5a122a.chunk.js",
+    "static/js/2.cc5a122a.chunk.js.map": "/static/js/2.cc5a122a.chunk.js.map",
     "index.html": "/index.html",
     "static/css/main.5147c11d.chunk.css.map": "/static/css/main.5147c11d.chunk.css.map",
-    "static/js/2.6c3d5f4e.chunk.js.LICENSE.txt": "/static/js/2.6c3d5f4e.chunk.js.LICENSE.txt",
+    "static/js/2.cc5a122a.chunk.js.LICENSE.txt": "/static/js/2.cc5a122a.chunk.js.LICENSE.txt",
     "static/media/1000.jpg": "/static/media/1000.edbcf1c4.jpg",
     "static/media/1001.jpg": "/static/media/1001.fb313f36.jpg",
     "static/media/1002.jpg": "/static/media/1002.ded69eaa.jpg",
@@ -25,11 +25,12 @@
     "static/media/1011.jpg": "/static/media/1011.efb51fe9.jpg",
     "static/media/1012.jpg": "/static/media/1012.b25872b2.jpg",
     "static/media/1013.jpg": "/static/media/1013.7b738118.jpg",
-    "static/media/1014.jpg": "/static/media/1014.c5dceaab.jpg",
-    "static/media/1015.jpg": "/static/media/1015.d9f49731.jpg",
-    "static/media/1016.jpg": "/static/media/1016.0137436e.jpg",
-    "static/media/1017.jpg": "/static/media/1017.b485c767.jpg",
-    "static/media/1018.jpg": "/static/media/1018.a931bdda.jpg",
+    "static/media/1014.jpg": "/static/media/1014.3e54fa97.jpg",
+    "static/media/1015.jpg": "/static/media/1015.c5dceaab.jpg",
+    "static/media/1016.jpg": "/static/media/1016.d9f49731.jpg",
+    "static/media/1017.jpg": "/static/media/1017.0137436e.jpg",
+    "static/media/1018.jpg": "/static/media/1018.b485c767.jpg",
+    "static/media/1019.jpg": "/static/media/1019.a931bdda.jpg",
     "static/media/index.css": "/static/media/Helvetica.06113bf7.ttf",
     "static/media/OngNataliaResume2021.5ac23b15.pdf": "/static/media/OngNataliaResume2021.5ac23b15.pdf",
     "static/media/OngNataliaResume2021.ec76f24c.png": "/static/media/OngNataliaResume2021.ec76f24c.png",
@@ -44,8 +45,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.c2220bc7.js",
-    "static/js/2.6c3d5f4e.chunk.js",
+    "static/js/2.cc5a122a.chunk.js",
     "static/css/main.5147c11d.chunk.css",
-    "static/js/main.9cc6e558.chunk.js"
+    "static/js/main.82fff058.chunk.js"
   ]
 }
