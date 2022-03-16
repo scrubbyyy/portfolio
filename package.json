@@ -1,8 +1,8 @@
 {
-  "name": "nataliaongportfolio",
+  "name": "nataliaportfolio",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://www.nataliaongportfolio.com/",
+  "homepage": "https://www.nataliaportfolio.com/",
   "dependencies": {
     "gh-pages": "^3.1.0",
     "react": "^17.0.1",

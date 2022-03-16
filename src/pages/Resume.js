@@ -35,7 +35,7 @@ function Resume({ theme, isDarkMode }) {
             <SocialMediaLinks isDarkMode={isDarkMode} />
           </div>
           <a href={ResumePdf} download>
-            <Button variant="link">Natalia Ong Resume.pdf</Button>
+            <Button variant="link">Natalia Schott Resume.pdf</Button>
           </a>
         </Card.Body>
       </Card>

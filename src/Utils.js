@@ -28,7 +28,7 @@ export function createImageComponents(images) {
         style={styles.image}
         key={image.default}
         src={image.default}
-        alt="Natalia Ong Art"
+        alt="Natalia Schott Art"
       />
     );
   });
