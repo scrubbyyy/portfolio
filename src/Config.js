@@ -33,7 +33,7 @@ export const colors = {
 };
 
 export const content = {
-  mainTitle: "Natalia Ong's Portfolio",
+  mainTitle: "Natalia Schott's Portfolio",
   subtitle: "Concept Art & Illustration",
   aboutMe:
     "I am a concept artist living in the SF Bay Area. I have 5+ years of experience working in video games.",
