@@ -36,7 +36,7 @@ export const content = {
   mainTitle: "Natalia Schott's Portfolio",
   subtitle: "Concept Art & Illustration",
   aboutMe:
-    "I am a concept artist living in the SF Bay Area. I have 5+ years of experience working in video games.",
+    "I am a concept artist living in the SF Bay Area. I have 9+ years of experience working in video games.",
   aboutMeFooter: "Thanks for checking out my portfolio!",
   lolbyte:
     "I designed and created the assets for LolByte, a browser extension and iOS/Android App that allows users to look up matches for the game 'League of Legends'",
