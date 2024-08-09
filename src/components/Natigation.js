@@ -87,13 +87,23 @@ function Natigation({ theme, isDarkMode, darkModeHandler }) {
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="ml-auto">
           <NavDropdown title={<span style={styles.navItem}>Portfolio</span>}>
+          <NavDropdown.Item>
+              <Link
+                onClick={() => setExpanded(false)}
+                style={styles.secondaryNavItem}
+                to="/#apex"
+              >
+                Apex Legends
+              </Link>
+            </NavDropdown.Item>
+            <NavDropdown.Divider />
             <NavDropdown.Item>
               <Link
                 onClick={() => setExpanded(false)}
                 style={styles.secondaryNavItem}
                 to="/#env"
               >
-                Environments
+                Personal Projects
               </Link>
             </NavDropdown.Item>
             <NavDropdown.Divider />

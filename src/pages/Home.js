@@ -26,6 +26,10 @@ function Home({ theme }) {
     },
   };
 
+  const apexImages = importAll(
+    require.context("../images/home/apex", false, /\.(png|jpe?g|svg)$/)
+  );
+
   const envImages = importAll(
     require.context("../images/home/environments", false, /\.(png|jpe?g|svg)$/)
   );
@@ -49,8 +53,11 @@ function Home({ theme }) {
           Portfolio Links
         </Card.Header>
         <Card.Body style={themedStyles(theme).cardBody}>
+          <Link style={styles.portfolioLink} to="/#apex">
+            Apex Legends
+          </Link>
           <Link style={styles.portfolioLink} to="/#env">
-            Environments
+            Personal Projects
           </Link>
           <Link style={styles.portfolioLink} to="/#starwars">
             Star Wars: Commander
@@ -64,8 +71,12 @@ function Home({ theme }) {
         </Card.Body>
       </Card>
 
+      <h2 style={styles.header} id="apex">
+        Apex Legends
+      </h2>
+      {createImageComponents(apexImages)}
       <h2 style={styles.header} id="env">
-        Environments
+        Personal Projects
       </h2>
       {createImageComponents(envImages)}
       <hr style={styles.separator} />
