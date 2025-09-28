@@ -101,9 +101,29 @@ function Natigation({ theme, isDarkMode, darkModeHandler }) {
               <Link
                 onClick={() => setExpanded(false)}
                 style={styles.secondaryNavItem}
-                to="/#env"
+                to="/#apex"
               >
-                Personal Projects
+                Apex Legends
+              </Link>
+            </NavDropdown.Item>
+            <NavDropdown.Divider />
+            <NavDropdown.Item>
+              <Link
+                onClick={() => setExpanded(false)}
+                style={styles.secondaryNavItem}
+                to="/#personal"
+              >
+                Personal Work
+              </Link>
+            </NavDropdown.Item>
+            <NavDropdown.Divider />
+            <NavDropdown.Item>
+              <Link
+                onClick={() => setExpanded(false)}
+                style={styles.secondaryNavItem}
+                to="/#illustrations"
+              >
+                Illustrations
               </Link>
             </NavDropdown.Item>
             <NavDropdown.Divider />
@@ -126,30 +146,20 @@ function Natigation({ theme, isDarkMode, darkModeHandler }) {
                 Glu Mobile
               </Link>
             </NavDropdown.Item>
-            <NavDropdown.Divider />
-            <NavDropdown.Item>
-              <Link
-                onClick={() => setExpanded(false)}
-                style={styles.secondaryNavItem}
-                to="/#illustrations"
-              >
-                Illustrations
-              </Link>
-            </NavDropdown.Item>
           </NavDropdown>
           <Nav.Link
             onClick={() => setExpanded(false)}
             style={styles.navItem}
             href="/#/projects"
           >
-            Projects
+            LolByte
           </Nav.Link>
           <Nav.Link
             onClick={() => setExpanded(false)}
             style={styles.navItem}
             href="/#/resume"
           >
-            Resume
+            About Me
           </Nav.Link>
         </Nav>
       </Navbar.Collapse>

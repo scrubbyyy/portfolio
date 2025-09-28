@@ -22,7 +22,7 @@ function Resume({ theme, isDarkMode }) {
     <div style={styles.container}>
       <Card style={themedStyles(theme).card}>
         <Card.Header as="h4" style={themedStyles(theme).cardHeader}>
-          Resume
+          About Me
         </Card.Header>
         <Card.Body style={themedStyles(theme).cardBody}>
           <Card.Text style={themedStyles(theme).cardText}>
@@ -31,15 +31,15 @@ function Resume({ theme, isDarkMode }) {
           <Card.Text style={themedStyles(theme).cardText}>
             {content.aboutMeFooter}
           </Card.Text>
-          <div style={styles.socialLinks}>
+          {/* <div style={styles.socialLinks}>
             <SocialMediaLinks isDarkMode={isDarkMode} />
-          </div>
-          <a href={ResumePdf} download>
-            <Button variant="link">Natalia Schott Resume.pdf</Button>
-          </a>
+          </div> */}
+          {/* <a href={ResumePdf} download>
+            <Button variant="link">Natalia Ong Resume.pdf</Button>
+          </a> */}
         </Card.Body>
       </Card>
-      <img style={defaultStyles.image} src={ResumePng} alt="Resume" />
+      {/* <img style={defaultStyles.image} src={ResumePng} alt="Resume" /> */}
     </div>
   );
 }

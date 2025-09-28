@@ -30,8 +30,12 @@ function Home({ theme }) {
     require.context("../images/home/apex", false, /\.(png|jpe?g|svg)$/)
   );
 
-  const envImages = importAll(
-    require.context("../images/home/environments", false, /\.(png|jpe?g|svg)$/)
+  const personalImages = importAll(
+    require.context("../images/home/personal", false, /\.(png|jpe?g|svg)$/)
+  );
+
+  const illustrationImages = importAll(
+    require.context("../images/home/illustrations", false, /\.(png|jpe?g|svg)$/)
   );
 
   const starWarsImages = importAll(
@@ -40,10 +44,6 @@ function Home({ theme }) {
 
   const gluImages = importAll(
     require.context("../images/home/glu", false, /\.(png|jpe?g|svg)$/)
-  );
-
-  const illustrationImages = importAll(
-    require.context("../images/home/illustrations", false, /\.(png|jpe?g|svg)$/)
   );
 
   return (
@@ -56,17 +56,17 @@ function Home({ theme }) {
           <Link style={styles.portfolioLink} to="/#apex">
             Apex Legends
           </Link>
-          <Link style={styles.portfolioLink} to="/#env">
-            Personal Projects
+          <Link style={styles.portfolioLink} to="/#personal">
+            Personal Work
+          </Link>
+          <Link style={styles.portfolioLink} to="/#illustrations">
+            Illustrations
           </Link>
           <Link style={styles.portfolioLink} to="/#starwars">
             Star Wars: Commander
           </Link>
           <Link style={styles.portfolioLink} to="/#glu">
             Glu Mobile
-          </Link>
-          <Link style={styles.portfolioLink} to="/#illustrations">
-            Illustrations
           </Link>
         </Card.Body>
       </Card>
@@ -75,10 +75,16 @@ function Home({ theme }) {
         Apex Legends
       </h2>
       {createImageComponents(apexImages)}
-      <h2 style={styles.header} id="env">
-        Personal Projects
+      <hr style={styles.separator} />
+      <h2 style={styles.header} id="personal">
+        Personal Work
       </h2>
-      {createImageComponents(envImages)}
+      {createImageComponents(personalImages)}
+      <hr style={styles.separator} />
+      <h2 style={styles.header} id="illustrations">
+        Illustrations
+      </h2>
+      {createImageComponents(illustrationImages)}
       <hr style={styles.separator} />
       <h2 style={styles.header} id="starwars">
         Star Wars: Commander
@@ -89,11 +95,6 @@ function Home({ theme }) {
         Glu Mobile
       </h2>
       {createImageComponents(gluImages)}
-      <hr style={styles.separator} />
-      <h2 style={styles.header} id="illustrations">
-        Illustrations
-      </h2>
-      {createImageComponents(illustrationImages)}
     </div>
   );
 }
