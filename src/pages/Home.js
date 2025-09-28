@@ -1,101 +1,111 @@
-import { createImageComponents, importAll } from "../Utils.js";
-
-import { Card } from "react-bootstrap";
+import { Container, Row, Col, Image, Card } from "react-bootstrap";
+import { useState } from "react";
+import Lightbox from "yet-another-react-lightbox";
+import "yet-another-react-lightbox/styles.css";
 import { HashLink as Link } from "react-router-hash-link";
-import { themedStyles } from "../Styles.js";
 
-function Home({ theme }) {
-  const styles = {
-    container: {
-      textAlign: "center",
-    },
-    portfolioLink: {
-      color: theme.secondaryFont,
-      margin: 5,
-      textDecoration: "underline",
-    },
-    header: {
-      color: theme.headerFont,
-      fontFamily: theme.boldFont,
-    },
-    separator: {
-      color: theme.outline,
-      backgroundColor: theme.outline,
-      height: 0.2,
-      width: "97%",
-    },
-  };
+function importAll(r) {
+  return r.keys().map(r);
+}
+
+function Home() {
+  const [open, setOpen] = useState(false);
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [currentImages, setCurrentImages] = useState([]);
 
   const apexImages = importAll(
-    require.context("../images/home/apex", false, /\.(png|jpe?g|svg)$/)
+    require.context("../images/home/apex", false, /\.(png|jpe?g|svg)$/),
   );
 
   const personalImages = importAll(
-    require.context("../images/home/personal", false, /\.(png|jpe?g|svg)$/)
+    require.context("../images/home/personal", false, /\.(png|jpe?g|svg)$/),
   );
 
   const illustrationImages = importAll(
-    require.context("../images/home/illustrations", false, /\.(png|jpe?g|svg)$/)
+    require.context(
+      "../images/home/illustrations",
+      false,
+      /\.(png|jpe?g|svg)$/,
+    ),
   );
 
   const starWarsImages = importAll(
-    require.context("../images/home/starwars", false, /\.(png|jpe?g|svg)$/)
+    require.context("../images/home/starwars", false, /\.(png|jpe?g|svg)$/),
   );
 
   const gluImages = importAll(
-    require.context("../images/home/glu", false, /\.(png|jpe?g|svg)$/)
+    require.context("../images/home/glu", false, /\.(png|jpe?g|svg)$/),
   );
 
-  return (
-    <div style={styles.container}>
-      <Card style={themedStyles(theme).card}>
-        <Card.Header as="h4" style={themedStyles(theme).cardHeader}>
-          Portfolio Links
-        </Card.Header>
-        <Card.Body style={themedStyles(theme).cardBody}>
-          <Link style={styles.portfolioLink} to="/#apex">
-            Apex Legends
-          </Link>
-          <Link style={styles.portfolioLink} to="/#personal">
-            Personal Work
-          </Link>
-          <Link style={styles.portfolioLink} to="/#illustrations">
-            Illustrations
-          </Link>
-          <Link style={styles.portfolioLink} to="/#starwars">
-            Star Wars: Commander
-          </Link>
-          <Link style={styles.portfolioLink} to="/#glu">
-            Glu Mobile
-          </Link>
-        </Card.Body>
-      </Card>
+  const sections = [
+    { title: "Apex Legends", images: apexImages, id: "apex" },
+    { title: "Personal Work", images: personalImages, id: "personal" },
+    { title: "Illustrations", images: illustrationImages, id: "illustrations" },
+    { title: "Star Wars: Commander", images: starWarsImages, id: "starwars" },
+    { title: "Glu Mobile", images: gluImages, id: "glu" },
+  ];
 
-      <h2 style={styles.header} id="apex">
-        Apex Legends
-      </h2>
-      {createImageComponents(apexImages)}
-      <hr style={styles.separator} />
-      <h2 style={styles.header} id="personal">
-        Personal Work
-      </h2>
-      {createImageComponents(personalImages)}
-      <hr style={styles.separator} />
-      <h2 style={styles.header} id="illustrations">
-        Illustrations
-      </h2>
-      {createImageComponents(illustrationImages)}
-      <hr style={styles.separator} />
-      <h2 style={styles.header} id="starwars">
-        Star Wars: Commander
-      </h2>
-      {createImageComponents(starWarsImages)}
-      <hr style={styles.separator} />
-      <h2 style={styles.header} id="glu">
-        Glu Mobile
-      </h2>
-      {createImageComponents(gluImages)}
-    </div>
+  const openLightbox = (images, index) => {
+    setCurrentImages(images.map((image) => ({ src: image })));
+    setCurrentIndex(index);
+    setOpen(true);
+  };
+
+  return (
+    <Container fluid className="pt-3">
+      <Row className="justify-content-center text-center">
+        <Col md={8}></Col>
+      </Row>
+
+      <Row className="justify-content-center">
+        <Col md={8}>
+          <Card className="portfolio-card">
+            <Card.Header as="h4" className="text-center">
+              Portfolio Links
+            </Card.Header>
+            <Card.Body className="text-center">
+              {sections.map((section, index) => (
+                <Link
+                  key={index}
+                  to={`/#${section.id}`}
+                  className="mx-2 portfolio-link"
+                >
+                  {section.title}
+                </Link>
+              ))}
+            </Card.Body>
+          </Card>
+        </Col>
+      </Row>
+
+      {sections.map((section) => (
+        <div key={section.id} id={section.id}>
+          <h2 className="text-center my-4">{section.title}</h2>
+          <Row>
+            {section.images.map((image, index) => (
+              <Col md={4} key={index} className="mb-4">
+                <Image
+                  src={image}
+                  alt={`${section.title} ${index + 1}`}
+                  fluid
+                  thumbnail
+                  className="portfolio-image"
+                  onClick={() => openLightbox(section.images, index)}
+                />
+              </Col>
+            ))}
+          </Row>
+          <hr />
+        </div>
+      ))}
+
+      <Lightbox
+        open={open}
+        close={() => setOpen(false)}
+        slides={currentImages}
+        index={currentIndex}
+      />
+    </Container>
   );
 }
 

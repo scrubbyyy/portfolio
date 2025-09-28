@@ -1,34 +1,56 @@
-import { createImageComponents, importAll } from "../Utils.js";
-
-import { Card } from "react-bootstrap";
+import { Container, Row, Col, Image } from "react-bootstrap";
 import { content } from "../Config.js";
-import { themedStyles } from "../Styles.js";
+import { useState } from "react";
+import Lightbox from "yet-another-react-lightbox";
+import "yet-another-react-lightbox/styles.css";
 
-function Projects({ theme }) {
-  const styles = {
-    container: {
-      textAlign: "center",
-    },
-  };
+function importAll(r) {
+  return r.keys().map(r);
+}
+
+function Projects() {
+  const [open, setOpen] = useState(false);
+  const [currentIndex, setCurrentIndex] = useState(0);
 
   const images = importAll(
-    require.context("../images/projects", false, /\.(png|jpe?g|svg)$/)
+    require.context("../images/projects", false, /\.(png|jpe?g|svg)$/),
   );
 
+  const openLightbox = (index) => {
+    setCurrentIndex(index);
+    setOpen(true);
+  };
+
   return (
-    <div style={styles.container}>
-      <Card style={themedStyles(theme).card}>
-        <Card.Header as="h4" style={themedStyles(theme).cardHeader}>
-          LolByte
-        </Card.Header>
-        <Card.Body style={themedStyles(theme).cardBody}>
-          <Card.Text style={themedStyles(theme).cardText}>
-            {content.lolbyte}
-          </Card.Text>
-        </Card.Body>
-      </Card>
-      {createImageComponents(images)}
-    </div>
+    <Container className="pt-3">
+      <Row className="justify-content-center text-center py-3">
+        <Col md={8}>
+          <h1>LolByte</h1>
+          <p className="lead">{content.lolbyte}</p>
+        </Col>
+      </Row>
+      <Row>
+        {images.map((image, index) => (
+          <Col md={12} key={index} className="mb-4">
+            <Image
+              src={image}
+              alt={`Project image ${index + 1}`}
+              fluid
+              thumbnail
+              className="portfolio-image"
+              onClick={() => openLightbox(index)}
+            />
+          </Col>
+        ))}
+      </Row>
+
+      <Lightbox
+        open={open}
+        close={() => setOpen(false)}
+        slides={images.map((image) => ({ src: image }))}
+        index={currentIndex}
+      />
+    </Container>
   );
 }
 

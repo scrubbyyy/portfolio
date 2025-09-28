@@ -1,46 +1,27 @@
-import { styles as defaultStyles, themedStyles } from "../Styles.js";
-
-import { Button } from "react-bootstrap";
-import { Card } from "react-bootstrap";
-import ResumePdf from "../images/resume/OngNataliaResume2021.pdf";
-import ResumePng from "../images/resume/OngNataliaResume2021.png";
-import SocialMediaLinks from "../components/SocialMediaLinks.js";
+import { Container, Row, Col, Image } from "react-bootstrap";
 import { content } from "../Config.js";
 
-function Resume({ theme, isDarkMode }) {
-  const styles = {
-    container: {
-      textAlign: "center",
-    },
-    socialLinks: {
-      paddingTop: 10,
-      paddingBottom: 10,
-    },
-  };
+import headshot from "../images/headshot/natalia.jpeg";
 
+function Resume() {
   return (
-    <div style={styles.container}>
-      <Card style={themedStyles(theme).card}>
-        <Card.Header as="h4" style={themedStyles(theme).cardHeader}>
-          About Me
-        </Card.Header>
-        <Card.Body style={themedStyles(theme).cardBody}>
-          <Card.Text style={themedStyles(theme).cardText}>
-            {content.aboutMe}
-          </Card.Text>
-          <Card.Text style={themedStyles(theme).cardText}>
-            {content.aboutMeFooter}
-          </Card.Text>
-          {/* <div style={styles.socialLinks}>
-            <SocialMediaLinks isDarkMode={isDarkMode} />
-          </div> */}
-          {/* <a href={ResumePdf} download>
-            <Button variant="link">Natalia Ong Resume.pdf</Button>
-          </a> */}
-        </Card.Body>
-      </Card>
-      {/* <img style={defaultStyles.image} src={ResumePng} alt="Resume" /> */}
-    </div>
+    <Container className="pt-3">
+      <Row className="justify-content-center align-items-center py-3">
+        <Col md={4} className="text-center">
+          <Image
+            src={headshot}
+            roundedCircle
+            fluid
+            className="headshot-image"
+          />
+        </Col>
+        <Col md={8}>
+          <h2>About Me</h2>
+          <p>{content.aboutMe}</p>
+          <p>{content.aboutMeFooter}</p>
+        </Col>
+      </Row>
+    </Container>
   );
 }
 

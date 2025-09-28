@@ -3,16 +3,19 @@
 Website for showcasing Natalia Schott's art.
 
 ## Install Deps
+
 ```bash
-> yarn install
+> npm install
 ```
 
 ## Run Locally
+
 ```bash
-> yarn start
+> npm start
 ```
 
 ## Deploy
+
 ```bash
-> yarn deploy
+> npm run deploy
 ```
