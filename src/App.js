@@ -4,7 +4,6 @@ import { useState, useEffect } from "react";
 import Home from "./pages/Home.js";
 import Natigation from "./components/Natigation.js";
 import Resume from "./pages/Resume.js";
-import SocialMediaLinks from "./components/SocialMediaLinks.js";
 import ScrollToTopButton from "./components/ScrollToTopButton.js";
 import { colors } from "./Config.js";
 
