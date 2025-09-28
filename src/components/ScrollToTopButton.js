@@ -41,7 +41,7 @@ const ScrollToTopButton = () => {
             position: 'fixed',
             bottom: '20px',
             right: '20px',
-            zIndex: '1000',
+            zIndex: '9999',
             borderRadius: '50%',
             width: '50px',
             height: '50px',

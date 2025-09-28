@@ -45,15 +45,6 @@ function Home() {
     require.context("../images/projects", false, /\.(png|jpe?g|svg)$/),
   );
 
-  const allImages = [
-    ...apexImages,
-    ...personalImages,
-    ...illustrationImages,
-    ...starWarsImages,
-    ...gluImages,
-    ...imagesProjects,
-  ];
-
   const sections = [
     { title: "Apex Legends", images: apexImages, id: "apex", emoji: "🎮" },
     { title: "Personal Work", images: personalImages, id: "personal", emoji: "🎨" },
@@ -63,9 +54,9 @@ function Home() {
     { title: "LolByte", images: imagesProjects, id: "lolbyte", emoji: "🎮" },
   ];
 
-  const openLightbox = (startIndex) => {
-    setCurrentImages(allImages.map((image) => ({ src: image })));
-    setCurrentIndex(startIndex);
+  const openLightbox = (images, index) => {
+    setCurrentImages(images.map((image) => ({ src: image })));
+    setCurrentIndex(index);
     setOpen(true);
   };
 
@@ -97,50 +88,45 @@ function Home() {
       <Lightbox
         open={open}
         close={() => setOpen(false)}
-        slides={allImages.map((image) => ({ src: image }))}
+        slides={currentImages}
         index={currentIndex}
         plugins={[Thumbnails, Zoom]}
         closeOnSwipeDown={true}
         thumbnails={{ showToggle: true, scroll: true }}
+        className="custom-lightbox"
       />
 
-      {sections.map((section) => {
-        let offset = 0;
-        for (let i = 0; i < sections.indexOf(section); i++) {
-          offset += sections[i].images.length;
-        }
-        return (
-          <div key={section.id} id={section.id}>
-            <div className="d-flex align-items-center my-4 px-3">
-              <div className="flex-grow-1 text-center">
-                <h2 className="mb-0">{section.title}</h2>
-              </div>
+      {sections.map((section) => (
+        <div key={section.id} id={section.id}>
+          <div className="d-flex align-items-center my-4 px-3">
+            <div className="flex-grow-1 text-center">
+              <h2 className="mb-0">{section.title}</h2>
             </div>
-            {section.id === "lolbyte" && (
-              <Row className="justify-content-center text-center py-3">
-                <Col md={8}>
-                  <p>{content.lolbyte}</p>
-                </Col>
-              </Row>
-            )}
-            <Row>
-              {section.images.map((image, index) => (
-                <Col md={section.id === "lolbyte" ? 7 : 4} className="mx-auto mb-4">
-                  <Image
-                    src={image}
-                    alt={`${section.title} ${index + 1}`}
-                    fluid
-                    thumbnail
-                    className="portfolio-image"
-                    onClick={() => openLightbox(offset + index)}
-                  />
-                </Col>
-              ))}
-            </Row>
-            <hr />
           </div>
-        );
-      })}
+          {section.id === "lolbyte" && (
+            <Row className="justify-content-center text-center py-3">
+              <Col md={8}>
+                <p>{content.lolbyte}</p>
+              </Col>
+            </Row>
+          )}
+          <Row>
+            {section.images.map((image, index) => (
+              <Col md={section.id === "lolbyte" ? 7 : 4} className="mx-auto mb-4">
+                <Image
+                  src={image}
+                  alt={`${section.title} ${index + 1}`}
+                  fluid
+                  thumbnail
+                  className="portfolio-image"
+                  onClick={() => openLightbox(section.images, index)}
+                />
+              </Col>
+            ))}
+          </Row>
+          <hr />
+        </div>
+      ))}
     </Container>
   );
 }
