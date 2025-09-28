@@ -4,6 +4,8 @@ import Lightbox from "yet-another-react-lightbox";
 import "yet-another-react-lightbox/styles.css";
 import Thumbnails from "yet-another-react-lightbox/plugins/thumbnails";
 import "yet-another-react-lightbox/plugins/thumbnails.css";
+import Zoom from "yet-another-react-lightbox/plugins/zoom";
+import "yet-another-react-lightbox/plugins/zoom.css";
 import { HashLink as Link } from "react-router-hash-link";
 import { content } from "../Config.js";
 
@@ -98,7 +100,7 @@ function Home() {
         close={() => setOpen(false)}
         slides={allImages.map((image) => ({ src: image }))}
         index={currentIndex}
-        plugins={[Thumbnails]}
+        plugins={[Thumbnails, Zoom]}
         closeOnSwipeDown={true}
       />
 
