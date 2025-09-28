@@ -89,7 +89,6 @@ function Home() {
         plugins={[Thumbnails, Zoom]}
         closeOnSwipeDown={true}
         thumbnails={{ showToggle: true, scroll: true }}
-        className="custom-lightbox"
       />
 
       {sections.map((section, index) => (
