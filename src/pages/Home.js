@@ -3,6 +3,7 @@ import { useState } from "react";
 import Lightbox from "yet-another-react-lightbox";
 import "yet-another-react-lightbox/styles.css";
 import { HashLink as Link } from "react-router-hash-link";
+import { content } from "../Config.js";
 
 function importAll(r) {
   return r.keys().map(r);
@@ -37,17 +38,31 @@ function Home() {
     require.context("../images/home/glu", false, /\.(png|jpe?g|svg)$/),
   );
 
-  const sections = [
-    { title: "Apex Legends", images: apexImages, id: "apex" },
-    { title: "Personal Work", images: personalImages, id: "personal" },
-    { title: "Illustrations", images: illustrationImages, id: "illustrations" },
-    { title: "Star Wars: Commander", images: starWarsImages, id: "starwars" },
-    { title: "Glu Mobile", images: gluImages, id: "glu" },
+  const imagesProjects = importAll(
+    require.context("../images/projects", false, /\.(png|jpe?g|svg)$/),
+  );
+
+  const allImages = [
+    ...apexImages,
+    ...personalImages,
+    ...illustrationImages,
+    ...starWarsImages,
+    ...gluImages,
+    ...imagesProjects,
   ];
 
-  const openLightbox = (images, index) => {
-    setCurrentImages(images.map((image) => ({ src: image })));
-    setCurrentIndex(index);
+  const sections = [
+    { title: "Apex Legends", images: apexImages, id: "apex", emoji: "🎮" },
+    { title: "Personal Work", images: personalImages, id: "personal", emoji: "🎨" },
+    { title: "Illustrations", images: illustrationImages, id: "illustrations", emoji: "✏️" },
+    { title: "Star Wars: Commander", images: starWarsImages, id: "starwars", emoji: "🚀" },
+    { title: "Glu Mobile", images: gluImages, id: "glu", emoji: "📱" },
+    { title: "LolByte", images: imagesProjects, id: "lolbyte", emoji: "🎮" },
+  ];
+
+  const openLightbox = (startIndex) => {
+    setCurrentImages(allImages.map((image) => ({ src: image })));
+    setCurrentIndex(startIndex);
     setOpen(true);
   };
 
@@ -76,37 +91,50 @@ function Home() {
         </Col>
       </Row>
 
-      {sections.map((section) => (
-        <div key={section.id} id={section.id}>
-          <div className="d-flex align-items-center my-4 px-3">
-            <div className="flex-grow-1 text-center">
-              <h2 className="mb-0">{section.title}</h2>
-            </div>
-          </div>
-          <Row>
-            {section.images.map((image, index) => (
-              <Col md={4} key={index} className="mb-4">
-                <Image
-                  src={image}
-                  alt={`${section.title} ${index + 1}`}
-                  fluid
-                  thumbnail
-                  className="portfolio-image"
-                  onClick={() => openLightbox(section.images, index)}
-                />
-              </Col>
-            ))}
-          </Row>
-          <hr />
-        </div>
-      ))}
-
       <Lightbox
         open={open}
         close={() => setOpen(false)}
-        slides={currentImages}
+        slides={allImages.map((image) => ({ src: image }))}
         index={currentIndex}
       />
+
+      {sections.map((section) => {
+        let offset = 0;
+        for (let i = 0; i < sections.indexOf(section); i++) {
+          offset += sections[i].images.length;
+        }
+        return (
+          <div key={section.id} id={section.id}>
+            <div className="d-flex align-items-center my-4 px-3">
+              <div className="flex-grow-1 text-center">
+                <h2 className="mb-0">{section.title}</h2>
+              </div>
+            </div>
+            {section.id === "lolbyte" && (
+              <Row className="justify-content-center text-center py-3">
+                <Col md={8}>
+                  <p>{content.lolbyte}</p>
+                </Col>
+              </Row>
+            )}
+            <Row>
+              {section.images.map((image, index) => (
+                <Col md={section.id === "lolbyte" ? 7 : 4} className="mx-auto mb-4">
+                  <Image
+                    src={image}
+                    alt={`${section.title} ${index + 1}`}
+                    fluid
+                    thumbnail
+                    className="portfolio-image"
+                    onClick={() => openLightbox(offset + index)}
+                  />
+                </Col>
+              ))}
+            </Row>
+            <hr />
+          </div>
+        );
+      })}
     </Container>
   );
 }

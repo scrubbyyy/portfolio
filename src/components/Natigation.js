@@ -44,13 +44,6 @@ function Natigation({ theme, isDarkMode, darkModeHandler }) {
           <Nav.Link
             onClick={() => setExpanded(false)}
             className="nav-item"
-            href="/#/projects"
-          >
-            Projects
-          </Nav.Link>
-          <Nav.Link
-            onClick={() => setExpanded(false)}
-            className="nav-item"
             href="/#/resume"
           >
             About Me

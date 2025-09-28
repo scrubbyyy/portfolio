@@ -3,7 +3,6 @@ import { useState, useEffect } from "react";
 
 import Home from "./pages/Home.js";
 import Natigation from "./components/Natigation.js";
-import Projects from "./pages/Projects.js";
 import Resume from "./pages/Resume.js";
 import SocialMediaLinks from "./components/SocialMediaLinks.js";
 import ScrollToTopButton from "./components/ScrollToTopButton.js";
@@ -66,7 +65,6 @@ function App() {
         />
         <Routes>
           <Route exact path="/" element={<Home />} />
-          <Route path="/projects" element={<Projects />} />
           <Route path="/resume" element={<Resume />} />
         </Routes>
 
