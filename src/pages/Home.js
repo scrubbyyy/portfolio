@@ -92,8 +92,9 @@ function Home() {
         className="custom-lightbox"
       />
 
-      {sections.map((section) => (
+      {sections.map((section, index) => (
         <div key={section.id} id={section.id}>
+          {index > 0 && <hr />}
           <div className="d-flex align-items-center my-4 px-3">
             <div className="flex-grow-1 text-center">
               <h2 className="mb-0">{section.title}</h2>
@@ -120,7 +121,6 @@ function Home() {
               </Col>
             ))}
           </Row>
-          <hr />
         </div>
       ))}
     </Container>

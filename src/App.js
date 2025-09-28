@@ -65,12 +65,9 @@ function App() {
         />
         <Routes>
           <Route exact path="/" element={<Home />} />
-          <Route path="/resume" element={<Resume />} />
+          <Route path="/resume" element={<Resume isDarkMode={isDarkMode} />} />
         </Routes>
 
-        <div style={{ paddingTop: 20, paddingBottom: 20 }}>
-          <SocialMediaLinks isDarkMode={isDarkMode} />
-        </div>
         <ScrollToTopButton />
       </Router>
     </div>
