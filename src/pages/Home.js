@@ -52,7 +52,7 @@ function Home() {
   };
 
   return (
-    <Container fluid className="pt-3">
+    <Container fluid className="pt-3" id="top">
       <Row className="justify-content-center text-center">
         <Col md={8}></Col>
       </Row>
@@ -85,7 +85,11 @@ function Home() {
 
       {sections.map((section) => (
         <div key={section.id} id={section.id}>
-          <h2 className="text-center my-4">{section.title}</h2>
+          <div className="d-flex align-items-center my-4 px-3">
+            <div className="flex-grow-1 text-center">
+              <h2 className="mb-0">{section.title}</h2>
+            </div>
+          </div>
           <Row>
             {section.images.map((image, index) => (
               <Col md={4} key={index} className="mb-4">

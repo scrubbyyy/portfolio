@@ -6,6 +6,7 @@ import Natigation from "./components/Natigation.js";
 import Projects from "./pages/Projects.js";
 import Resume from "./pages/Resume.js";
 import SocialMediaLinks from "./components/SocialMediaLinks.js";
+import ScrollToTopButton from "./components/ScrollToTopButton.js";
 import { colors } from "./Config.js";
 
 function useLocalStorage(key, initialValue) {
@@ -72,6 +73,7 @@ function App() {
         <div style={{ paddingTop: 20, paddingBottom: 20 }}>
           <SocialMediaLinks isDarkMode={isDarkMode} />
         </div>
+        <ScrollToTopButton />
       </Router>
     </div>
   );

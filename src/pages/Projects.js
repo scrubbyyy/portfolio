@@ -26,12 +26,12 @@ function Projects() {
       <Row className="justify-content-center text-center py-3">
         <Col md={8}>
           <h1>LolByte</h1>
-          <p className="lead">{content.lolbyte}</p>
+          <p>{content.lolbyte}</p>
         </Col>
       </Row>
       <Row>
         {images.map((image, index) => (
-          <Col md={12} key={index} className="mb-4">
+          <Col md={9} className="mx-auto mb-4">
             <Image
               src={image}
               alt={`Project image ${index + 1}`}
