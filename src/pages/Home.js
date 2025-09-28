@@ -60,7 +60,7 @@ function Home() {
       <Row className="justify-content-center">
         <Col md={8}>
           <Card className="portfolio-card">
-            <Card.Header as="h4" className="text-center">
+            <Card.Header as="h5" className="text-center">
               Portfolio Links
             </Card.Header>
             <Card.Body className="text-center">
