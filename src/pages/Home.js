@@ -5,7 +5,6 @@ import "yet-another-react-lightbox/styles.css";
 import Thumbnails from "yet-another-react-lightbox/plugins/thumbnails";
 import "yet-another-react-lightbox/plugins/thumbnails.css";
 import Zoom from "yet-another-react-lightbox/plugins/zoom";
-import "yet-another-react-lightbox/plugins/zoom.css";
 import { HashLink as Link } from "react-router-hash-link";
 import { content } from "../Config.js";
 
@@ -102,6 +101,7 @@ function Home() {
         index={currentIndex}
         plugins={[Thumbnails, Zoom]}
         closeOnSwipeDown={true}
+        thumbnails={{ showToggle: true, scroll: true }}
       />
 
       {sections.map((section) => {
