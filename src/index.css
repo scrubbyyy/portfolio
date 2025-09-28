@@ -97,3 +97,15 @@ body.dark-mode .portfolio-card .card-header {
     max-width: 175px; /* Increased by ~20% */
   }
 }
+
+body.light-mode .portfolio-button-custom {
+  background-color: #e9ecef;
+  border-color: #e9ecef;
+  color: #212529;
+}
+
+body.dark-mode .portfolio-button-custom {
+  background-color: #495057;
+  border-color: #495057;
+  color: #f8f9fa;
+}

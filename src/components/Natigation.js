@@ -46,7 +46,7 @@ function Natigation({ theme, isDarkMode, darkModeHandler }) {
             className="nav-item"
             href="/#/projects"
           >
-            LolByte
+            Projects
           </Nav.Link>
           <Nav.Link
             onClick={() => setExpanded(false)}

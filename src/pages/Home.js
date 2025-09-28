@@ -1,4 +1,4 @@
-import { Container, Row, Col, Image, Card } from "react-bootstrap";
+import { Container, Row, Col, Image, Card, Button } from "react-bootstrap";
 import { useState } from "react";
 import Lightbox from "yet-another-react-lightbox";
 import "yet-another-react-lightbox/styles.css";
@@ -65,13 +65,16 @@ function Home() {
             </Card.Header>
             <Card.Body className="text-center">
               {sections.map((section, index) => (
-                <Link
+                <Button
                   key={index}
+                  as={Link}
                   to={`/#${section.id}`}
-                  className="mx-2 portfolio-link"
+                  variant="secondary"
+                  size="lg"
+                  className="m-2 portfolio-button-custom"
                 >
                   {section.title}
-                </Link>
+                </Button>
               ))}
             </Card.Body>
           </Card>
