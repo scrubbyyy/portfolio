@@ -64,18 +64,20 @@ function Home() {
               Portfolio Links
             </Card.Header>
             <Card.Body className="text-center">
-              {sections.map((section, index) => (
-                <Button
-                  key={index}
-                  as={Link}
-                  to={`/#${section.id}`}
-                  variant="secondary"
-                  size="lg"
-                  className="m-2 portfolio-button-custom"
-                >
-                  {section.title}
-                </Button>
-              ))}
+              <div className="d-flex justify-content-center flex-wrap flex-column flex-md-row">
+                {sections.map((section, index) => (
+                  <Button
+                    key={index}
+                    as={Link}
+                    to={`/#${section.id}`}
+                    variant="secondary"
+                    size="md"
+                    className="m-2 portfolio-button-custom"
+                  >
+                    {section.title}
+                  </Button>
+                ))}
+              </div>
             </Card.Body>
           </Card>
         </Col>
