@@ -1,4 +1,4 @@
-import { Container, Row, Col, Image, Card, Button } from "react-bootstrap";
+import { Container, Row, Col, Image, Button } from "react-bootstrap";
 import { useState } from "react";
 import Lightbox from "yet-another-react-lightbox";
 import "yet-another-react-lightbox/styles.css";
@@ -62,10 +62,6 @@ function Home() {
 
   return (
     <Container fluid className="pt-3" id="top">
-      <Row className="justify-content-center text-center">
-        <Col md={8}></Col>
-      </Row>
-
       <Row className="justify-content-center text-center">
         <Col md={8}>
           <div className="d-flex justify-content-center flex-wrap flex-column flex-md-row">
