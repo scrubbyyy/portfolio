@@ -104,8 +104,18 @@ body.light-mode .portfolio-button-custom {
   color: #212529;
 }
 
+body.light-mode .portfolio-button-custom:hover {
+  background-color: #ced4da;
+  border-color: #ced4da;
+}
+
 body.dark-mode .portfolio-button-custom {
   background-color: #495057;
   border-color: #495057;
   color: #f8f9fa;
+}
+
+body.dark-mode .portfolio-button-custom:hover {
+  background-color: #6c757d;
+  border-color: #6c757d;
 }

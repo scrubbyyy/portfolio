@@ -57,29 +57,22 @@ function Home() {
         <Col md={8}></Col>
       </Row>
 
-      <Row className="justify-content-center">
+      <Row className="justify-content-center text-center">
         <Col md={8}>
-          <Card className="portfolio-card">
-            <Card.Header as="h5" className="text-center">
-              Portfolio Links
-            </Card.Header>
-            <Card.Body className="text-center">
-              <div className="d-flex justify-content-center flex-wrap flex-column flex-md-row">
-                {sections.map((section, index) => (
-                  <Button
-                    key={index}
-                    as={Link}
-                    to={`/#${section.id}`}
-                    variant="secondary"
-                    size="md"
-                    className="m-2 portfolio-button-custom"
-                  >
-                    {section.title}
-                  </Button>
-                ))}
-              </div>
-            </Card.Body>
-          </Card>
+          <div className="d-flex justify-content-center flex-wrap flex-column flex-md-row">
+            {sections.map((section, index) => (
+              <Button
+                key={index}
+                as={Link}
+                to={`/#${section.id}`}
+                variant="secondary"
+                size="md"
+                className="m-2 portfolio-button-custom"
+              >
+                {section.title}
+              </Button>
+            ))}
+          </div>
         </Col>
       </Row>
 
