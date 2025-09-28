@@ -2,6 +2,8 @@ import { Container, Row, Col, Image, Card, Button } from "react-bootstrap";
 import { useState } from "react";
 import Lightbox from "yet-another-react-lightbox";
 import "yet-another-react-lightbox/styles.css";
+import Thumbnails from "yet-another-react-lightbox/plugins/thumbnails";
+import "yet-another-react-lightbox/plugins/thumbnails.css";
 import { HashLink as Link } from "react-router-hash-link";
 import { content } from "../Config.js";
 
@@ -96,6 +98,8 @@ function Home() {
         close={() => setOpen(false)}
         slides={allImages.map((image) => ({ src: image }))}
         index={currentIndex}
+        plugins={[Thumbnails]}
+        closeOnSwipeDown={true}
       />
 
       {sections.map((section) => {
